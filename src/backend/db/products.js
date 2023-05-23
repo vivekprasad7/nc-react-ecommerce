@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import {cake1, cake2, cake3, cake4, cake5, cake6,cake7, cake8, cake9, cake10, muffin1, muffin2, muffin3, muffin4, muffin5, pastry1, pastry2,pastry3, pastry4, pastry5} from '../../assets';
 
 /**
  * Product Database can be added here.
@@ -8,9 +9,9 @@ import { v4 as uuid } from "uuid";
 
 export const products = [
   {
-    _id: uuid(),
+    _id: "ad9bb515-3d1c-483f-8446-40d10cce759d",
     title: "Mango Tropical Cake",
-    image:mango1,
+    image:cake1,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango1_fwaa0l.webp",
     ratings: {
       rate:"4.5",
@@ -27,9 +28,9 @@ export const products = [
     desc:"The Mango Tropical Cake is an ideal dessert for mango lovers and those seeking a unique twist on traditional cakes. It is perfect for special occasions, celebrations, or simply as a decadent treat to savor any time of the year. (6 serving,169 calories each, protein-3 grams each, carbs-33 grams each)",
   },
   {
-    _id: uuid(),
+    _id: "b51abe1b-e546-4a5f-b17a-94aa0aa75652",
     title: "Butterscotch Overloaded Cake",
-    image:butter1,
+    image:cake2,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/butter1_zjd04q.jpg",
     ratings: {
       rate:"4.1",
@@ -46,9 +47,9 @@ export const products = [
     desc:"Good old butterscotch cake - just overload of it to give you an unmatched taste. Best choice for Birthday cake or Anniversary cake. (Vanilla Sponge + Butterscotch nuts + Butterscotch crush) (6 Serving, 152 calories each, protein-3g each, carbs-29g each)",
   },
   {
-    _id: uuid(),
+    _id: "181e8e28-afb6-4a53-ab2d-f9f7348b44a9",
     title: "Rasmalai Cake",
-    image:ras1,
+    image:cake3,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/rasmalai-cake_gfbhfb.jpg",
     ratings: {
       rate:"3.9",
@@ -65,9 +66,9 @@ export const products = [
     desc:"Yummy Indian fusion Rasmalai cake - a blend of traditional indian Rasmalai sweet and western dessert. [Vanilla+Rasmalai+Kesar milk] ( 6 Serving , 211 calories each, Protein-4g, Carbs-31g each) ",
   },
   {
-    _id: uuid(),
+    _id: "b2ddef51-d28f-4e9c-8d30-e3c119d7272f",
     title: "Chocolate Truffle Cake",
-    image:mango1,
+    image:cake4,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/chocolate-truffle-cake_gaygcj.jpg",
     ratings: {
       rate:"4.7",
@@ -84,9 +85,9 @@ export const products = [
     desc:"If it were easy to resist, it would not be called chocolate cake. Try our bestseller to taste real freshness. Best choice for Birthday cake or Anniversary cake. [ Chocolate Sponge + Truffle + Chocolate layering] (6 Serving, 401 calories each, protein-7g each, carbs- 53g each)",
   },
   {
-    _id: uuid(),
+    _id: "66880a00-bc39-40e2-92eb-d3afdd25b5cf",
     title: "Jungle Safari Fondant Cake",
-    image:jungle1,
+    image:cake5,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/jungle-fondant-cake_japot9.jpg",
     ratings: {
       rate:"4.2",
@@ -103,9 +104,9 @@ export const products = [
     desc:"Invite some wilderness in your birthday party by ordering this jungle safari fondant theme cake, this cake is filled with animals which cherishes kids and greenery around signifies the nature of forest. You can choose the flavor which you like most. All our cakes are made fresh and with love, with No added preservatives, all-natural, and best-quality ingredients safe for children and adults.",
   },
   {
-    _id: uuid(),
+    _id: "f17bff86-995c-45fa-827a-902c54f1cdd8",
     title: "Red Velvet Egg Cake",
-    image:red1,
+    image:cake6,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/red-velvet-egg-cake_m0v2hi.jpg",
     ratings: {
       rate:"4.0",
@@ -122,9 +123,9 @@ export const products = [
     desc:"Preparation starts after receiving the order. No storage. Scrumptious and tempting, creamy red velvet cake with the taste of cocoa and sugar. (6 Serving, 383 calories each, protein-6g each, carbs-47g each)",
   },
   {
-    _id: uuid(),
+    _id: "09755991-ed17-430e-8fad-c292e136f061",
     title: "Strawberry Cheesecake",
-    image:straw1,
+    image:cake7,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/strawberry-cheesecake-500gm-_tqhdzv.jpg",
     ratings: {
       rate:"4.9",
@@ -141,9 +142,9 @@ export const products = [
     desc:"Bite into our smooth, rich, fresh, and dense texture of cheesecake and Strawberry . We stand by our promise, of sweeter celebrations with CakeZone. (4 Serving, 567 calories each, protein - 6g each, carbs-53g each)",
   },
   {
-    _id: uuid(),
+    _id: "4198a865-8d52-4621-8f7a-9c1271eafd37",
     title: "Mango Fruit Eggless Cake",
-    image:mango2,
+    image:cake8,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango-fruit-eggless-cake_dpawsn.jpg",
     ratings: {
       rate:"4.3",
@@ -160,9 +161,9 @@ export const products = [
     desc:"Bite into artisanal Mango fruit cake topped with tasty, flavored mango filling on top and layered vanilla sponge, our fresh cake made right after the order is placed. We stand by our promise of delivering sweeter celebrations. [ Vanilla Sponge + Mango filling + Mango Crush + Cream] (6 serving, 321 Calories each, protein-6g each, Carbs-56g each",
   },
   {
-    _id: uuid(),
+    _id: "edc59062-2775-4a4d-bfc9-ca334b014f55",
     title: "French Blueberry Cheese Cake",
-    image:blue1,
+    image:cake9,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/french-blueberry-cheese-cake-500gm-_dhxiff.jpg",
     ratings: {
       rate:"4.2",
@@ -179,9 +180,9 @@ export const products = [
     desc:"The richness of fresh cheesecake is topped with premium blueberry fruit filling. (4 Serving, 521 calories each, protein-6g each, carbs-40g each) ",
   },
   {
-    _id: uuid(),
+    _id: "50ea3a7c-bf91-4a41-b5ee-ae49717402b5",
     title: "Black Forest Eggless Cake",
-    image:black1,
+    image:cake10,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/black-forest-eggless-cake_ywqqug.jpg",
     ratings: {
       rate:"4.7",
@@ -199,7 +200,7 @@ export const products = [
   },
 
   {
-    _id: uuid(),
+    _id: "ed21760a-e88e-4d78-9bfd-8807f1f2c024",
     title: "Chocolote Muffin",
     image:muffin1,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin1-choco_zz0cxs.webp",
@@ -218,7 +219,7 @@ export const products = [
     desc:"This delicious Chocolate Muffin made with chocolate chips and rich ganache filling is what chocolatey dreams are made of.",
   },
   {
-    _id: uuid(),
+    _id: "555d6f65-e5cc-4ef0-a139-ac7e1959883c",
     title: "Red Velvet Muffin",
     image:muffin2,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin2_zmisrt.webp",
@@ -237,7 +238,7 @@ export const products = [
     desc:"Our Red Velvet muffin made with soft sponge filled with delicious cream cheese is sure to give a velvety touch to your tastebuds.",
   },
   {
-    _id: uuid(),
+    _id: "e8fdd588-a714-4eda-a23b-fc8082cf8abb",
     title: "Blueberry Muffin",
     image:muffin3,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin3-blue_qd50gq.webp",
@@ -256,7 +257,7 @@ export const products = [
     desc:"Our delicious muffins made with fresh blueberries are an absolute delight in every bite. Must try!",
   },
   {
-    _id: uuid(),
+    _id: "5a716ab3-e800-49a0-9cee-e132dd467f52",
     title: "Hazlenut Muffin",
     image:muffin4,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin4-hazlenut_ebmwvh.webp",
@@ -275,10 +276,10 @@ export const products = [
     desc:"A nutty affair you wont want to miss out on. Rich chocolatey muffin with delicious Nutella filling.",
   },
   {
-    _id: uuid(),
+    _id: "cdb7260a-3f8d-497d-976b-72b79efe5087",
     title: "Dark Fantasy Muffin",
     image:muffin5,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin5-darkfant_up0yux.webp ",
+    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin5-darkfant_up0yux.webp",
     ratings: {
       rate:"4.3",
       count:"322"
@@ -295,7 +296,7 @@ export const products = [
   },
 
   {
-    _id: uuid(),
+    _id: "e5dad40e-0be4-46db-af2c-d2a31a5166d1",
     title: "Strawberry Cheesecake",
     image:pastry1,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry1-strawberry_ipi1tg.webp",
@@ -314,7 +315,7 @@ export const products = [
     desc:"Delectable cheesecake made with fresh strawberries and rich cream cheese is sure to make you fall in love berry much. Try now!",
   },
   {
-    _id: uuid(),
+    _id: "3b6d561b-990d-4441-ba35-daeee839eead",
     title: "Blueberry Cheesecake",
     image:pastry2,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry2-blueberry_nhvcrt.webp",
@@ -333,7 +334,7 @@ export const products = [
     desc:"The combination of delicious cream cheese and fresh blueberries is what makes our Blueberry cheesecake stand apart. Try now!",
   },
   {
-    _id: uuid(),
+    _id: "95371b1f-5384-4012-8461-c1e5b23561a4",
     title: "Rich Red Velvet Pastry",
     image:pastry3,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry3-red-velvet_uoqkba.webp",
@@ -352,7 +353,7 @@ export const products = [
     desc:"Rich and moist Red Velvet cake layered with fresh cream cheese makes our Red Velvet pastry difficult to share. Youll think twice too",
   },
   {
-    _id: uuid(),
+    _id: "59039aa6-842f-42c6-9e4b-b498adb24a7c",
     title: "Chocolate Truffle Pastry",
     image:pastry4,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry4-choc-truffle2_ts1jsz.jpg",
@@ -371,7 +372,7 @@ export const products = [
     desc:"(Eggless) Layers of soft chocolate sponge and dense but silky-smooth chocolate ganache make this cake a decadent celebration.",
   },
   {
-    _id: uuid(),
+    _id: "0cdc3b89-bcb9-48e4-8271-3db68c87b6e6",
     title: "Mango Cheesecake",
     image:pastry5,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp",
