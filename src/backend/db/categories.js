@@ -8,20 +8,23 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "Cakes",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "We offer an extensive variety of mouth-watering cakes and confections that will undoubtedly make you surrender your senses.",
+    image:image1,
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "Muffins and Pastries",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Bite into our delightful Muffins & you will experience a burst of natural flavor and freshness of ingredients that literally melts in your mouth. ",
+    image:image2,
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "Desserts",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Surprise yourself with sweetness of delicacies and falvors to bring your childhood memories back",
+    image:image3,
   },
 ];
