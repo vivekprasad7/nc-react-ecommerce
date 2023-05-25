@@ -7,10 +7,17 @@ export const ProductCard = ({item}) => {
     <>
     <div className='product-card'>
         <img src={image} />
-        <h4>{title}</h4>
-        <p>{price} {originalPrice}</p>
-        <span>{ratings.rate}</span>
-        <button>Add to Cart</button>
+        <span className='card-best'>Best Seller</span>
+        <span className='card-heart ' role="button" disabled={true}><i className="fa fa-heart wishlist-circle" aria-hidden="true"></i> </span>
+        <div className='card-info'>
+        <h4 className='card-title'>{title}</h4>
+        <p className='card-price'>{price} <span className='strike'>{originalPrice}</span> </p>
+        <span className='card-rate'>
+        <span className='card-ratings'>{ratings.rate} <i class="fa fa-star"></i></span> ({ratings.count})
+        </span>
+         
+        </div>
+        <button className='card-btn'>Add to Cart</button>
     </div>
 
     </>
