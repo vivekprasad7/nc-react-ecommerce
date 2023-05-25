@@ -13,3 +13,19 @@
     margin-top: 30px;
     font-size: 15px;
 }
+
+.vertical-flex{
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem;
+    margin:10px 0;
+}
+
+.range-values{
+    margin: 10px 0;
+    display: flex;
+    gap:0.8rem;
+}
+
+
+   

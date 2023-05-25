@@ -14,9 +14,9 @@ export const Sidebar = () => {
 
         <div>
           <div className="range-values">
-            <p>100</p>
-            <p>500</p>
-            <p>1000</p>
+            <p>0</p>
+            <p>1500</p>
+            <p>3000</p>
           </div>
 
           <input
@@ -32,39 +32,39 @@ export const Sidebar = () => {
 
       <div className="category-filter">
         <h4>Category</h4>
-        <div>
+        <div className="vertical-flex">
           <label>
             <input name="category" type="checkbox" className="input-category" />{" "}
-            : Cakes
+             Cakes
           </label>
 
           <label>
             <input name="category" type="checkbox" className="input-category" />{" "}
-            : Muffins and Pastries
+            Muffins and Pastries
           </label>
 
           <label>
             <input name="category" type="checkbox" className="input-category" />{" "}
-            : Dessets
+             Dessets
           </label>
         </div>
       </div>
 
       <div className="rating-filter">
         <h4>Rating</h4>
-        <div>
-            <label><input type="radio"/> : 1 Stars and above</label>
-            <label><input type="radio"/> : 2 Stars and above</label>
-            <label><input type="radio"/> : 3 Stars and above</label>
-            <label><input type="radio"/> : 4 Stars and above</label>
+        <div className="vertical-flex">
+            <label><input type="radio"/>  1 Stars and above</label>
+            <label><input type="radio"/> 2 Stars and above</label>
+            <label><input type="radio"/>  3 Stars and above</label>
+            <label><input type="radio"/>  4 Stars and above</label>
         </div>
       </div>
 
       <div className="sort-filter">
         <h4>Sort By</h4>
-        <div>
-            <label><input type="radio"/> : Price: Low to High</label>
-            <label><input type="radio"/> : Price: High to Low</label>
+        <div className="vertical-flex">
+            <label><input type="radio"/> Price: Low to High</label>
+            <label><input type="radio"/>  Price: High to Low</label>
         </div>
 
       </div>
