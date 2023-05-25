@@ -10,7 +10,7 @@ export const ProductCard = ({item}) => {
         <h4>{title}</h4>
         <p>{price} {originalPrice}</p>
         <span>{ratings.rate}</span>
-        <button>Add to Card</button>
+        <button>Add to Cart</button>
     </div>
 
     </>
