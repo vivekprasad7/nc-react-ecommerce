@@ -22,8 +22,6 @@ function App() {
       </nav>
 
       <Header/>
-
-
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/products" element={<ProductListing/>}/>
