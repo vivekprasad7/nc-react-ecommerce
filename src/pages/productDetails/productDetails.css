@@ -26,6 +26,8 @@
 
    
     flex-grow: 1;
+    text-overflow: hidden;
+    
 
     
 }

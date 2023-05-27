@@ -5,8 +5,8 @@ import "./productListing.css"
 import { Sidebar } from '../../components/sidebar/sidebar';
 
 export const ProductListing = () => {
-  const {data} = useProductsContext();
-  console.log(data);
+  const {productData} = useProductsContext();
+  console.log(productData);
   return (
     <>
     <div>ProductListing</div>
@@ -15,7 +15,7 @@ export const ProductListing = () => {
     <Sidebar/>
     <div className='products-container'>
       {
-        data?.map((item) => {
+        productData?.map((item) => {
 
           return(
           <ProductCard item={item} key={item._id}/>
