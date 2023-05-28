@@ -7,14 +7,19 @@ export const ProductsContextProvider = ({children}) => {
 
     const [productData, setProductData] = useState([]);
     const [categoryData, setCategoryData] = useState([]);
+    const [productLoading, setProductLoading] = useState(false);
+
 
     const getProducts = async () => {
         try{
+            setProductLoading(true)
             const res = await axios({ method:"GET", url:"/api/products"});
             setProductData(res.data.products);
             console.log(res);
+            setProductLoading(false)
         } catch(e){
             console.error(e)
+            setProductLoading(false)
         }
     }
     const getCategories = async () => {
@@ -36,7 +41,7 @@ export const ProductsContextProvider = ({children}) => {
 
 
     return(
-        <ProductsContext.Provider value={{productData, categoryData}}>
+        <ProductsContext.Provider value={{productData, categoryData, productLoading}}>
             {children}
         </ProductsContext.Provider>
     )

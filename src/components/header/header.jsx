@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
+import { useFilterContext } from "../../contexts/filterContext";
 
 export const Header = () => {
+  const {filterDispatch} = useFilterContext();
+
   return (
     <>
       <header className="header">
@@ -15,6 +18,7 @@ export const Header = () => {
             <input
               type="text"
               placeholder="Search Cakes, Muffins, Desserts..."
+              onChange={(e) => filterDispatch({type:"FILTER_BY_SEARCH", payload:e.target.value})}
             />
           </div>
           <nav className="nav-icons c_flex">

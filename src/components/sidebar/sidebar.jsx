@@ -1,12 +1,23 @@
 import React from "react";
-import "./sidebar.css"
+import "./sidebar.css";
+import { useFilterContext } from "../../contexts/filterContext";
+import { useProductsContext } from "../../contexts/productsContext";
 
 export const Sidebar = () => {
+  const { filterState, filterDispatch } = useFilterContext();
+  const { categoryData } = useProductsContext();
+
+  const handleClearAll = () => {
+    filterDispatch({ type: "CLEAR_ALL_FILTERS" });
+  };
+
+  const stars = [1, 2, 3, 4];
+
   return (
     <div className="sidebar">
       <h4>Filter Products</h4>
       <span>
-        <button>Clear Filters</button>
+        <button onClick={handleClearAll}>Clear Filters</button>
       </span>
 
       <div className="price-filter">
@@ -14,7 +25,7 @@ export const Sidebar = () => {
 
         <div>
           <div className="range-values">
-            <p>0</p>
+            <p>50</p>
             <p>1500</p>
             <p>3000</p>
           </div>
@@ -23,9 +34,16 @@ export const Sidebar = () => {
             type="range"
             name="inputPriceRange"
             className="input-price"
-            min="0"
+            min="50"
             max="3000"
-            value=""
+            step="100"
+            value={filterState?.priceRange}
+            onChange={(e) =>
+              filterDispatch({
+                type: "FILTER_BY_PRICE_RANGE",
+                payload: e.target.value,
+              })
+            }
           />
         </div>
       </div>
@@ -33,44 +51,79 @@ export const Sidebar = () => {
       <div className="category-filter">
         <h4>Category</h4>
         <div className="vertical-flex">
-          <label>
-            <input name="category" type="checkbox" className="input-category" />{" "}
-             Cakes
-          </label>
-
-          <label>
-            <input name="category" type="checkbox" className="input-category" />{" "}
-            Muffins and Pastries
-          </label>
-
-          <label>
-            <input name="category" type="checkbox" className="input-category" />{" "}
-             Dessets
-          </label>
+          {categoryData.map(({ categoryName }) => (
+            <div key={categoryName}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filterState?.categories.includes(categoryName)}
+                  onChange={() =>
+                    filterDispatch({
+                      type: "FILTER_BY_CATEGORY",
+                      payload: categoryName,
+                    })
+                  }
+                />
+                {categoryName}
+              </label>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="rating-filter">
         <h4>Rating</h4>
         <div className="vertical-flex">
-            <label><input type="radio"/>  1 Stars and above</label>
-            <label><input type="radio"/> 2 Stars and above</label>
-            <label><input type="radio"/>  3 Stars and above</label>
-            <label><input type="radio"/>  4 Stars and above</label>
+          {stars.map((rating) => {
+            return (
+              <li key={rating}>
+                <label>
+                  <input
+                    type="radio"
+                    name="ratings"
+                    value={rating}
+                    checked={rating === +filterState.sortByRating}
+                    onChange={(e) =>
+                      filterDispatch({
+                        type: "FILTER_BY_RATING",
+                        payload: e.target.value,
+                      })
+                    }
+                  />
+                  {rating} Stars and Above
+                </label>
+              </li>
+            );
+          })}
         </div>
       </div>
 
       <div className="sort-filter">
         <h4>Sort By</h4>
         <div className="vertical-flex">
-            <label><input type="radio"/> Price: Low to High</label>
-            <label><input type="radio"/>  Price: High to Low</label>
+          <label>
+            <input
+              name="sort"
+              type="radio"
+              checked={filterState.sortByPrice === "LTH"}
+              onChange={() =>
+                filterDispatch({ type: "SORT_BY_PRICE", payload: "LTH" })
+              }
+            />{" "}
+            Price: Low to High
+          </label>
+          <label> 
+          <input
+              name="sort"
+              type="radio"
+              checked={filterState.sortByPrice === "HTL"}
+              onChange={() =>
+                filterDispatch({ type: "SORT_BY_PRICE", payload: "HTL" })
+              }
+            />Price: High to Low
+          </label>
         </div>
-
       </div>
-
-
-
     </div>
   );
 };
