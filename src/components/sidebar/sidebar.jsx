@@ -26,8 +26,8 @@ export const Sidebar = () => {
         <div>
           <div className="range-values">
             <p>50</p>
+            <p>500</p>
             <p>1500</p>
-            <p>3000</p>
           </div>
 
           <input
@@ -35,7 +35,7 @@ export const Sidebar = () => {
             name="inputPriceRange"
             className="input-price"
             min="50"
-            max="3000"
+            max="1500"
             step="100"
             value={filterState?.priceRange}
             onChange={(e) =>
@@ -106,7 +106,8 @@ export const Sidebar = () => {
               name="sort"
               type="radio"
               checked={filterState.sortByPrice === "LTH"}
-              onChange={() =>
+              value="LTH"
+              onChange={(e) =>
                 filterDispatch({ type: "SORT_BY_PRICE", payload: "LTH" })
               }
             />{" "}
@@ -117,6 +118,7 @@ export const Sidebar = () => {
               name="sort"
               type="radio"
               checked={filterState.sortByPrice === "HTL"}
+              value="HTL"
               onChange={() =>
                 filterDispatch({ type: "SORT_BY_PRICE", payload: "HTL" })
               }

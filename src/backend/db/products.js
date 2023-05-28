@@ -325,7 +325,7 @@ export const products = [
     },
     price: "189",
     originalPrice: "229",
-    categoryName: "Muffins and Pastries",
+    categoryName: "Desserts",
     isInStock: true,
     weight: "180gm",
     isBestSeller: true,
