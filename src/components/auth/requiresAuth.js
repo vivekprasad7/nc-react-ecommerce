@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuthContext } from '../../contexts/authContext'
 import { Navigate, useLocation } from 'react-router-dom';
-import { Login } from '../../pages/login/login';
+import { Login } from '../../pages/auth/login/login';
 
 export const RequiresAuth = ({children}) => {
 

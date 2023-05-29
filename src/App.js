@@ -7,6 +7,8 @@ import { ProductDetails } from "./pages/productDetails/productDetails";
 import { Wishlist } from "./pages/wishlist/wishlist";
 import { Cart } from "./pages/cart/cart";
 import { Header } from "./components/header/header";
+import { Login } from "./pages/auth/login/login";
+import { Signup } from "./pages/auth/signup/signup";
 
 
 function App() {
@@ -19,6 +21,10 @@ function App() {
         <NavLink to="/cart">Cart</NavLink>  {" "} || {" "}
         <NavLink to="/wishlist">Wishlist</NavLink>  {" "} || {" "}
         <NavLink to="/">Home</NavLink>  {" "} || {" "}   
+        <NavLink to="/login">Login</NavLink>  {" "} || {" "}  
+        <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "}   
+ 
+
       </nav>
 
       <Header/>
@@ -29,6 +35,10 @@ function App() {
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/wishlist" element={<Wishlist/>}/>
       <Route path="/mockman" element={<Mockman/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<Signup/>}/>
+
+
       </Routes>
       
     </div>
