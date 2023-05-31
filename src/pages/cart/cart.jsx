@@ -2,11 +2,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import"./cart.css"
 import { useDataContext } from '../../contexts/dataContext';
+import { useAuthContext } from '../../contexts/authContext';
 
 export const Cart = () => {
   const navigate = useNavigate();
 
   const {dataState:{cart}} = useDataContext()
+  const{userLogin} = useAuthContext();
 
   const getData = async () => {
     try{
@@ -19,19 +21,20 @@ export const Cart = () => {
             body: JSON.stringify(creds)
         })
 
-        // const data = await res.json()
+        const data = await res.json()
 
+        console.log(data);
         // // get the encodedToken from data
         // const {encodedToken} = data
 
         //other way
 
-        const{encodedToken} = await res.json()
+        // const{encodedToken} = await res.json()
 
         // console.log(encodedToken)
 
-        localStorage.setItem("encodedToken", encodedToken);
-        console.log(localStorage.getItem("encodedToken", encodedToken))
+        // localStorage.setItem("encodedToken", encodedToken);
+        // console.log(localStorage.getItem("encodedToken", encodedToken))
 
         // console.log(await res.json())
 
@@ -41,7 +44,7 @@ export const Cart = () => {
 } 
   return (
     <div className='cart'>
-      {/* <h2 onClick={getData}>Cart</h2> */}
+      <h2 onClick={getData}>Cart</h2>
 
       <section className='cart-items'>
         {

@@ -1,36 +1,53 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
+import { authReducer } from "../reducers/authReducer";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState();
+
+    const authInitial ={
+        isLoggedIn: false,
+        user:{}, 
+        token:'',
+    }
 
 
-    const getData = async () => {
+    const [ authState, authDispatch] = useReducer(authReducer, authInitial)
+    const navigate = useNavigate();
+
+
+    const userLogin = async (loginData) => {
         try{
-            const creds = {
-                email : "adarshbalika@gmail.com",
-                password:"adarshbalika"
-            }
-            const res = await fetch("/api/auth/login", {
-                method:'POST',
-                body: JSON.stringify(creds)
+            const {data, status} = await axios({
+                method:"POST",
+                data:loginData,
+                url:"/api/auth/login"
             })
 
-            console.log(await res.json())
+            console.log("authcontext",data);
+            if(status ===200){
+                authDispatch({type:"SET_ISLOGGEDIN", payload:true})
+                authDispatch({type:"SET_USER", payload:data?.foundUser})
+                authDispatch({type:"SET_LOGGEDIN", payload:data?.encodedToken})
+                navigate('/');
+                localStorage.setItem('token', data?.encodedToken)
+            }
 
-        }catch(e){
+        
+        } catch(e){
             console.error(e)
         }
-    } 
+    }
 
 
 
 
     return(
         <>
-        <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
+        <AuthContext.Provider value={{ authState, authReducer, userLogin}}>
             {children}
         </AuthContext.Provider>
         </>
