@@ -15,7 +15,7 @@ export const Login = () => {
   }
 
   function handleUserLogin(){
-    if(loginInput.email.length !== 0 && loginInput.password.length !== 0){
+    if(loginInput.email.length === 0 && loginInput.password.length === 0){
       alert("Thik daal bey")
     } else {
       loginHandler(loginInput)
