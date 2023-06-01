@@ -9,7 +9,7 @@ export const AuthContextProvider = ({children}) => {
 
     const [loginInput, setLoginInput] = useState({email:"", password:""})
 
-    const [signupInput, setSignupInput] = useState({name:"", email:"",password:""})
+    const [signupInput, setSignupInput] = useState({name:"", email:"",password:"", confirmPassword:""})
 
     const authInitial = {
         authLoading: false,

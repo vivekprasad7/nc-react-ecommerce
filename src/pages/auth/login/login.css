@@ -59,6 +59,21 @@
     color: #fff;
   }
 
+  .form-input{
+    position:relative;
+  }
+
+  .password-toggle{
+    position:absolute;
+    border:none;
+    top:36px;
+    right:10px;
+  }
+
+  .login-signup-link:hover{
+    color: orange;
+  }
+
   
   @media (width < 768px){
     .form{
