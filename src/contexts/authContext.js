@@ -9,7 +9,7 @@ export const AuthContextProvider = ({children}) => {
 
     const [loginInput, setLoginInput] = useState({email:"", password:""})
 
-    const [signupInput, setSignupInput] = useState({name:"", email:"",password:"", confirmPassword:""})
+    const [signupInput, setSignupInput] = useState({firstName:"",lastName:"", email:"",password:"", confirmPassword:""})
 
     const authInitial = {
         authLoading: false,
@@ -40,6 +40,8 @@ export const AuthContextProvider = ({children}) => {
                 authDispatch({type: "SET_AUTH_LOADING", payload:false})
                 navigate(location?.state?.from?.pathname || "/")
                 localStorage.setItem("token", data?.encodedToken)
+                localStorage.setItem("current_user", data?.foundUser?.firstName)
+                console.log(data);
             }
         } catch(e){
             console.error(e);
@@ -64,8 +66,10 @@ export const AuthContextProvider = ({children}) => {
                 authDispatch({type: "SET_USER", payload:data?.createdUser})
                 authDispatch({type: "SET_TOKEN", payload:data?.encodedToken})
                 authDispatch({type: "SET_AUTH_LOADING", payload:false})
-                navigate(location?.state?.from?.pathname || "/")
+                // navigate(location?.state?.from?.pathname || "/")
                 localStorage.setItem("token", data?.encodedToken)
+                localStorage.setItem("new_user", data?.createdUser?.email)
+                console.log(data)
             }
         } catch(e){
             console.error(e);

@@ -15,13 +15,12 @@ export const Signup = () => {
     const handleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
 
     const handleUserSignup = () =>{
-        if(    signupInput.name.length === 0 
-            || signupInput.email.length === 0 
-            || signupInput.password.length === 0
-            || signupInput.confirmPassword.length === 0)
-     {
-        alert("THik daal bey")
-    } else if( signupInput.password !== signupInput.confirmPassword){
+
+        const { firstName, lastName, email, password, confirmPassword } = signupInput;
+
+    if( firstName === "" || lastName === "" || email === "" || password === "" || confirmPassword === ""){
+        alert("Input fields cannot be empty.")
+    } else if( password !== confirmPassword){
         alert("Passwords Don't Match")
     } else {
         signupHandler(signupInput)
@@ -34,10 +33,20 @@ export const Signup = () => {
         <div className='form'>
             <h2>Sign Up</h2>
             <div className='form-input'>
-                <label for='name'>Name: </label>
-                <input id='name' placeholder='John Snow'
-                    value={signupInput.name}
-                    onChange={(e)=> setSignupInput((prev)=> ({...prev, name: e.target.value}))}
+                <label for='name'>First Name: </label>
+                <input id='firstname' placeholder='John'
+                    value={signupInput.firstName}
+                    onChange={(e)=> setSignupInput((prev)=> ({...prev, firstName: e.target.value}))}
+
+                    // onChange={(e) => setSignupInput((prev) => ({...prev, name: e.target.value}))}
+                
+                />
+            </div>
+            <div className='form-input'>
+                <label for='name'> Last Name: </label>
+                <input id='lastname' placeholder='Snow'
+                    value={signupInput.lastName}
+                    onChange={(e)=> setSignupInput((prev)=> ({...prev, lastName: e.target.value}))}
 
                     // onChange={(e) => setSignupInput((prev) => ({...prev, name: e.target.value}))}
                 

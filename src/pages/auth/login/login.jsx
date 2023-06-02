@@ -15,8 +15,8 @@ export const Login = () => {
   }
 
   function handleUserLogin(){
-    if(loginInput.email.length === 0 && loginInput.password.length === 0){
-      alert("Thik daal bey")
+    if(loginInput.email === "" || loginInput.password === ""){
+      alert("Input fields cannot empty")
     } else {
       loginHandler(loginInput)
       navigate("/products")

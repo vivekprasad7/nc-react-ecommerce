@@ -1,4 +1,6 @@
 export const getFilteredProducts = (products, filterState) => {
+
+    // destructure filterstate
     
     let filteredProducts = products;
 

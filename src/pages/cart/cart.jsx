@@ -7,7 +7,7 @@ import { useAuthContext } from '../../contexts/authContext';
 export const Cart = () => {
   const navigate = useNavigate();
 
-  const {dataState:{cart}} = useDataContext()
+  const {dataState:{cart}, getCartData} = useDataContext()
   const{userLogin} = useAuthContext();
 
   const getData = async () => {
@@ -44,7 +44,7 @@ export const Cart = () => {
 } 
   return (
     <div className='cart'>
-      <h2 onClick={getData}>Cart</h2>
+      <h2 onClick={getCartData}>Cart</h2>
 
       <section className='cart-items'>
         {
