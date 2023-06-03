@@ -1,49 +1,18 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import"./cart.css"
-import { useDataContext } from '../../contexts/dataContext';
 import { useAuthContext } from '../../contexts/authContext';
+import { useCartContext } from '../../contexts/cartContext';
 
 export const Cart = () => {
+
   const navigate = useNavigate();
+  const{ authState:{token}} = useAuthContext();
+
+  const {cart} = useCartContext();
 
   
 
-  const {dataState:{cart}, dataDispatch} = useDataContext()
-  const{userLogin, authState:{token}} = useAuthContext();
-
-  const getData = async () => {
-    try{
-        const creds = {
-            email : "adarshbalika@gmail.com",
-            password:"adarshbalika"
-        }
-        const res = await fetch("/api/auth/login", {
-            method:'POST',
-            body: JSON.stringify(creds)
-        })
-
-        const data = await res.json()
-
-        console.log(data);
-        // // get the encodedToken from data
-        // const {encodedToken} = data
-
-        //other way
-
-        // const{encodedToken} = await res.json()
-
-        // console.log(encodedToken)
-
-        // localStorage.setItem("encodedToken", encodedToken);
-        // console.log(localStorage.getItem("encodedToken", encodedToken))
-
-        // console.log(await res.json())
-
-    }catch(e){
-        console.error(e)
-    }
-} 
   return (
     <div className='cart'>
       <h2>Cart</h2>

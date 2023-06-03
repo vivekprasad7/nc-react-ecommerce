@@ -81,7 +81,8 @@ export const WishlistContextProvider = ({children}) => {
 
     const addToWishlistHandler = (item) =>{
         if(token){
-         if( isItemInWishlist(item._id, wishlist) ) { removeFromWishlist(item._id)}  else {addToWishlist( item)}
+
+          isItemInWishlist(item._id, wishlist) ?  removeFromWishlist(item._id) :  addToWishlist( item)
     
         } else {
           navigate("/login")

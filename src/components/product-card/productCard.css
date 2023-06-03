@@ -119,6 +119,24 @@
   cursor: pointer;
 }
 
+.added-card-btn{
+  padding: 0.5rem;
+  /* background-color: #fff; */
+  background-color: #1dbf73;
+  margin: 10px;
+  border: solid 1px #1dbf73;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.added-card-btn a{
+  color: #fff;
+}
+.added-card-btn:hover{
+  background-color: #299361;
+}
+
 .card-btn:hover {
   background-color: #1dbf73;
   color: #fff;

@@ -1,18 +1,21 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./productCard.css";
 import { useDataContext } from '../../contexts/dataContext';
 import { useAuthContext } from '../../contexts/authContext';
 import { useWishlistContext } from '../../contexts/wishlistContext';
 import { addWishlistItem } from '../../services/dataFetchServices';
 import { isItemInWishlist } from '../../utils/isItemInWishlist';
+import { useCartContext } from '../../contexts/cartContext';
+import { isItemInCart } from '../../utils/isItemInCart';
 
 export const ProductCard = ({item}) => {
   const navigate = useNavigate()
 
   const {authState:{token}} = useAuthContext();
 
-  const {wishlist, setWishlist, addToWishlist, addToWishlistHandler} = useWishlistContext();
+  const {wishlist,  addToWishlistHandler} = useWishlistContext();
+  const{cart, addToCartHandler} = useCartContext();
 
   const {dataDispatch} = useDataContext();
 
@@ -44,7 +47,7 @@ export const ProductCard = ({item}) => {
         </span>
          
         </div>
-        <button className='card-btn' onClick={() => dataDispatch({type:"ADD_TO_CART", payload:item})}>Add to Cart</button>
+        <button className={!isItemInCart(_id,cart) ?'card-btn' : 'added-card-btn'} onClick={() => addToCartHandler(item) }>{isItemInCart(_id, cart) ? <Link to="/cart">Go to Cart</Link> : "Add to Cart"}</button>
     </div>
 
     </>
