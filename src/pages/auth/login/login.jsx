@@ -10,8 +10,8 @@ export const Login = () => {
 
 
   const testInput = {
-    email:"adarshbalika@gmail.com",
-    password:"adarshbalika"
+    email:"tylerdurden@gmail.com",
+    password:"tylerdurden"
   }
 
   function handleUserLogin(){
@@ -28,7 +28,7 @@ export const Login = () => {
     setLoginInput(testInput);
     loginHandler(testInput)
     navigate("/products")
-    setSignupInput({...signupInput, name: "Adarsh Balika", email:testInput.email})
+    setSignupInput({...signupInput, firstName: "Tyler", lastName:"Durden", email:testInput.email})
     
   }
 

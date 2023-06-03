@@ -1,48 +1,29 @@
 import axios from "axios"
 
-export const getWishlistData = async (token) => {
-    try{
-        const res = await axios({
+
+export const getWishlistService = async ( token) => 
+        await axios({
             method:'GET',
             url:'/api/user/wishlist',
-            headers:{authorization: token}
-        })
-        console.log("get_wish_data", res)
+            headers:{authorization:token},
+        });
 
-    } catch(e){
-        console.error(e)
-    }
-}
 
-export const addWishlistItem = async (item, token) => {
-    try{
-        const res = await axios({
+export const addToWishlistService = async (item, token) => 
+        await axios({
             method:'POST',
             url:'/api/user/wishlist/',
             data:{product: item},
             headers:{authorization: token},
         })
-        console.log("add_wishlist_item", res)
-
-    } catch(e){
-        console.error(e)
-    }
-}
 
 
-export const removeWishlistItem = async (productID, token) => {
-    try{
-        const res = await axios({
-            method:'DELETE',
-            url:`/api/user/wishlist/${productID}`,
-            headers:{authorization: token}
-        })
-        console.log("delete_wishlist_service", res)
-
-    } catch(e){
-        console.error(e)
-    }
-}
+export const removeWishlistService = async(productID, token) => 
+    await axios({
+        method:'DELETE',
+        url:`/api/user/wishlist/${productID}`,
+        headers:{authorization: token},
+    });
 
 
 

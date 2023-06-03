@@ -18,13 +18,13 @@ ReactDOM.render(
     <BrowserRouter>
       <AuthContextProvider>
         <ProductsContextProvider>
-          <WishlistContextProvider>
-            <FilterContextProvider>
-              <DataContextProvider>
+          <DataContextProvider>
+            <WishlistContextProvider>
+              <FilterContextProvider>
                 <App />
-              </DataContextProvider>
-            </FilterContextProvider>
-          </WishlistContextProvider>
+              </FilterContextProvider>
+            </WishlistContextProvider>
+          </DataContextProvider>
         </ProductsContextProvider>
       </AuthContextProvider>
     </BrowserRouter>

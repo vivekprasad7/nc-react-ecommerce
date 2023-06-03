@@ -3,14 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import"./cart.css"
 import { useDataContext } from '../../contexts/dataContext';
 import { useAuthContext } from '../../contexts/authContext';
-import { getWishlistData, addWishlistItem, removeWishlistItem } from '../../services/dataFetchServices';
 
 export const Cart = () => {
   const navigate = useNavigate();
 
   
 
-  const {dataState:{cart}} = useDataContext()
+  const {dataState:{cart}, dataDispatch} = useDataContext()
   const{userLogin, authState:{token}} = useAuthContext();
 
   const getData = async () => {
@@ -47,7 +46,7 @@ export const Cart = () => {
 } 
   return (
     <div className='cart'>
-      <h2 onClick={() => getWishlistData(token)}>Cart</h2>
+      <h2>Cart</h2>
 
       <section className='cart-items'>
         {
@@ -70,7 +69,7 @@ export const Cart = () => {
                   <img src={item.image} alt={item.title}  />
 
                   <div className='cart-details'>
-                  <h4 onClick={() => removeWishlistItem(item._id, token)}>{item.title}</h4>
+                  <h4>{item.title}</h4>
                   <h4>${item.price}.00 * {item.qty} 
                   <span></span></h4>
 
