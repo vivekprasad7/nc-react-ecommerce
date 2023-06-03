@@ -9,6 +9,7 @@ import { Cart } from "./pages/cart/cart";
 import { Header } from "./components/header/header";
 import { Login } from "./pages/auth/login/login";
 import { Signup } from "./pages/auth/signup/signup";
+import { UserAccount } from "./pages/userAccount/userAccount";
 
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
         <NavLink to="/wishlist">Wishlist</NavLink>  {" "} || {" "}
         <NavLink to="/">Home</NavLink>  {" "} || {" "}   
         <NavLink to="/login">Login</NavLink>  {" "} || {" "}  
-        <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "}   
- 
-
+        <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "} 
+        <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}   
+  
       </nav>
 
       <Header/>
@@ -37,6 +38,7 @@ function App() {
       <Route path="/mockman" element={<Mockman/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/profile" element={<UserAccount/>}/>
 
 
       </Routes>
