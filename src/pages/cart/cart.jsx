@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import"./cart.css"
 import { useAuthContext } from '../../contexts/authContext';
 import { useCartContext } from '../../contexts/cartContext';
+import { CartTotal } from '../../components/cart-total/cartTotal';
 
 export const Cart = () => {
 
@@ -67,11 +68,12 @@ export const Cart = () => {
       </section>
 
       <aside className='cart-total'>
-        <h2>Cart Summary</h2>
+        <CartTotal/>
+        {/* <h2>Cart Summary</h2>
         <div>
           <h3>Total Price:</h3>
           <h3>100$</h3>
-        </div>
+        </div> */}
       </aside>
 
 
