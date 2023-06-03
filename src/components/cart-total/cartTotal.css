@@ -4,3 +4,31 @@
     border-radius: 10px;
     padding:20px;
 }
+
+.cart-total-area hr{
+    border-top: 1px solid #1dbf73;
+
+}
+
+.cart-total-area h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.total-price ,.total-discount, .delivery, .cart-total-price{
+
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.cart-checkout-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-savings{
+    color:#087542;
+}

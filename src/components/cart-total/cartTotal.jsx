@@ -21,11 +21,12 @@ export const CartTotal = () => {
         <hr></hr>
         <div className='cart-total-price'>
         <p><b>Total Amount</b></p>
-        <p><b>Total Amount</b></p>
+        <p><b>$3245</b></p>
         </div>
+        <hr></hr>
         <div className='cart-checkout-btn'>
             <button>Checkout</button>
-            <p>You will save 150 on this order</p>
+            <p className='total-savings'>You will save 150 on this order</p>
         </div>
 
     </div>
