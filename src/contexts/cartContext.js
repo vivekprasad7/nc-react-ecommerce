@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { getCartService, addToCartService, removeCartService, updateCartQtyService } from "../services/dataFetchServices";
 import { useAuthContext } from "./authContext";
 import { useNavigate } from "react-router-dom";
@@ -66,6 +66,7 @@ export const CartContextProvider = ({children}) => {
 
             if(status === 200){
                 setCart(data?.cart)
+                console.log(cart);
             }
         } catch(e){
             console.error(e)
@@ -74,15 +75,28 @@ export const CartContextProvider = ({children}) => {
 
     const addToCartHandler = (item) => {
         if(token){
-            isItemInCart(item._id, cart) ? removeFromCart(item._id) : addToCart(item)
+            isItemInCart(item._id, cart) ? removeFromCart(item._id, token) : addToCart(item)
         } else{
             navigate("/login")
         }
     }
 
+    const updateCartHandler = (productID, updateType) => {
+        (updateType === "inc") ?  updateCartQty(productID, "increment", token) : updateCartQty(productID, "decrement", token)
+        
+    }
 
 
-    return(<CartContext.Provider value={{cart, addToCartHandler}}>{children}</CartContext.Provider>)
+    useEffect(() => {
+        if(token){
+            getCartData(token);
+        }
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[token])
+
+
+
+    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler}}>{children}</CartContext.Provider>)
 }
 
 export const useCartContext = () => useContext(CartContext);

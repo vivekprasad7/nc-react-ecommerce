@@ -9,7 +9,7 @@ export const Cart = () => {
   const navigate = useNavigate();
   const{ authState:{token}} = useAuthContext();
 
-  const {cart} = useCartContext();
+  const {cart, addToCartHandler , updateCartHandler} = useCartContext();
 
   
 
@@ -51,10 +51,10 @@ export const Cart = () => {
 
                 <div className='cart-inc-dec'>
 
-                    <button><i className='fa fa-plus'></i></button>
-                    <div>0</div>
-                    <button><i className='fa fa-minus'></i></button>
-                    <button><i className='fa fa-trash'></i></button>
+                    <button onClick={() => updateCartHandler(item._id, "inc")}><i className='fa fa-plus'></i></button>
+                    <div>{item.qty}</div>
+                    <button onClick={() => updateCartHandler(item._id, "dec")}><i className='fa fa-minus'></i></button>
+                    <button onClick={() => addToCartHandler(item)}><i className='fa fa-trash'></i></button>
 
 
                 </div>
