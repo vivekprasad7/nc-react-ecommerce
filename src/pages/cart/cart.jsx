@@ -53,9 +53,9 @@ export const Cart = () => {
 
                 <div className='cart-inc-dec'>
 
-                    <button onClick={() => updateCartHandler(item._id, "inc")}><i className='fa fa-plus'></i></button>
+                    <button onClick={() => updateCartHandler(item, "inc")}><i className='fa fa-plus'></i></button>
                     <div>{item.qty}</div>
-                    <button onClick={() => updateCartHandler(item._id, "dec")}><i className='fa fa-minus'></i></button>
+                    <button onClick={() => updateCartHandler(item, "dec")}><i className='fa fa-minus'></i></button>
                     <button onClick={() => addToCartHandler(item)}><i className='fa fa-trash'></i></button>
 
 

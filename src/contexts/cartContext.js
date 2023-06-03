@@ -81,9 +81,12 @@ export const CartContextProvider = ({children}) => {
         }
     }
 
-    const updateCartHandler = (productID, updateType) => {
-        (updateType === "inc") ?  updateCartQty(productID, "increment", token) : updateCartQty(productID, "decrement", token)
-        
+    const updateCartHandler = (item, updateType) => {
+        if (item.qty < 1){
+            removeFromCart(item._id, token)
+        } else{
+            (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
+        }   
     }
 
     const {totalPrice, totalDiscount, totalDelivery} = cart?.reduce((acc,curr) =>{
