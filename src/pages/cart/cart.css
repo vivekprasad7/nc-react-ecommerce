@@ -1,7 +1,12 @@
 .cart{
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
+.cart-heading{
+    text-align: center;
+    margin:10px auto;
+}
 
 
 .cart-items{ 
@@ -11,10 +16,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width:78%;
+    width:70%;
     padding: 50px 0;
     height:auto;
     margin:10px;
+    border-radius: 10px;
 }
 
 .cart-product{
@@ -47,7 +53,7 @@
 
 .cart-total{
     margin:10px;
-    width:30%;
+    width:28%;
     background-color: #ededed;
 }
 
@@ -58,3 +64,5 @@
 /* .card-heart i:hover{
     color:white;    
 } */ 
+
+

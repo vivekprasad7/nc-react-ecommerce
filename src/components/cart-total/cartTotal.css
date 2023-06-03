@@ -3,6 +3,7 @@
     box-shadow: 1px 2px 3px 3px rgba(0,0,0,0.2);
     border-radius: 10px;
     padding:20px;
+    min-width: 300px;
 }
 
 .cart-total-area hr{
@@ -31,4 +32,5 @@
 
 .total-savings{
     color:#087542;
+    text-align: center;
 }
