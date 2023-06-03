@@ -86,6 +86,12 @@ export const CartContextProvider = ({children}) => {
         
     }
 
+    const {totalPrice, totalDiscount, totalDelivery} = cart?.reduce((acc,curr) =>{
+        acc.totalPrice = (+curr.price * curr.qty) + +acc.totalPrice;
+        acc.totalDiscount = (+curr.originalPrice - +curr.price) + acc.totalDiscount;
+        return acc;
+    }, {totalPrice : 0, totalDiscount : 0, totalDelivery: 150})
+
 
     useEffect(() => {
         if(token){
@@ -96,7 +102,7 @@ export const CartContextProvider = ({children}) => {
 
 
 
-    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler}}>{children}</CartContext.Provider>)
+    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery}}>{children}</CartContext.Provider>)
 }
 
 export const useCartContext = () => useContext(CartContext);
