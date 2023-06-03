@@ -1,3 +1,35 @@
 .user-account-container{
     text-align: center;
 }
+
+.user-account-head{
+    padding: 1rem 0;
+}
+
+.user-profile-box{
+    max-width: 50%;
+    height:90vh;
+    /* height: max-content; */
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 12px 4px rgba(0,0,0,0.2);
+}
+
+.profile-tabs{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #1dbf73;
+}
+
+.user-profile-box .profile-tabs > *{
+    flex: 1 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+}
+
+
+@media (width < 768px){
+    .user-profile-box{
+      width:90%;
+    }
+  }

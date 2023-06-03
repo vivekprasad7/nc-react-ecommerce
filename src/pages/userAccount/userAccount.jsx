@@ -10,7 +10,7 @@ export const UserAccount = () => {
   return (
     <div>
         <main className='user-account-container container'>
-            <h2>My Account</h2>
+            <h2 className='user-account-head'>My Account</h2>
             <div className='user-profile-box'>
                 <div className='profile-tabs'>
                     <NavLink to="/profile/details" className={activeToggle}>Profile</NavLink>
