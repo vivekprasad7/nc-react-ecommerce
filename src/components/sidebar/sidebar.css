@@ -1,8 +1,13 @@
 .sidebar{
     position: sticky;
     top:30px;
-    background-color: #ededed;
-    box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+    background-color: #f6f9fc;
+    /* background-color: #fbfbca; */
+    /* background-color: #ffeeb3; */
+
+
+
+    /* box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.1); */
     padding:20px;
     display: flex;
     flex-direction: column;
@@ -12,6 +17,13 @@
     border-radius: 10px;
     margin-top: 30px;
     font-size: 15px;
+    /* border: solid 1px orange; */
+}
+
+.sidebar:hover{
+        /* box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.1); */
+        box-shadow: 1px 2px 12px 2px rgba(0, 0, 0, 0.1);
+
 }
 
 
