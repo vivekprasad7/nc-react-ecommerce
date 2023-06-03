@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import { useFilterContext } from "../../contexts/filterContext";
+import { useWishlistContext } from "../../contexts/wishlistContext";
+import { useCartContext } from "../../contexts/cartContext";
 
 export const Header = () => {
   const {filterDispatch} = useFilterContext();
+  const {wishlist} = useWishlistContext();
+  const {cart} = useCartContext();
 
   return (
     <>
@@ -33,14 +37,14 @@ export const Header = () => {
 
             <div className="nav-icon">
               <Link to="/wishlist">
-                <i className="fa fa-heart icon-circle"></i> <span>0</span>
+                <i className="fa fa-heart icon-circle"></i> <span>{wishlist.length}</span>
               </Link>
             </div>
 
             <div className="nav-icon">
               <Link to="/cart">
                 <i className="fa fa-shopping-bag icon-circle"></i>
-                <span>0</span>
+                <span>{cart.length}</span>
               </Link>
             </div>
           </nav>
