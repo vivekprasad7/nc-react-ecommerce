@@ -1,13 +1,13 @@
 import React from 'react'
 import { useAuthContext } from '../../contexts/authContext'
 import { Navigate, useLocation } from 'react-router-dom';
-import { Login } from '../../pages/auth/login/login';
 
 export const RequiresAuth = ({children}) => {
 
-    const location = useLocation()
+    const location = useLocation();
+    const {authState:{token}} = useAuthContext()
 
-    const {isLoggedIn} =useAuthContext();
+  
+    return token ? (children) : (<Navigate to="/login" state={{from:location}} replace/>)
 
-  return isLoggedIn ? children : <Navigate to={<Login/>} state={{from:location}}/>
 }

@@ -11,10 +11,11 @@ export const Details = () => {
 
   return (
     <div className='details-container'>
+       
       <div className='user-details'>
-          <p>Name: {user.firstName + " " + user.lastName}</p>
+          <p>Hi, <b>{user.firstName + " " + user.lastName}</b> </p>
           <p></p>
-          <p>Email : {user.email}</p>
+          <p> <b>Email :</b> {user.email}</p>
       </div>
       <button onClick={logoutHandler}>Logout</button>
 

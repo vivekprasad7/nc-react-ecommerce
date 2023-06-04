@@ -8,8 +8,8 @@
 
 .user-profile-box{
     max-width: 50%;
-    height:90vh;
-    /* height: max-content; */
+    /* height:70vh; */
+    height: max-content;
     margin: 1rem auto;
     border-radius: 10px;
     box-shadow: 1px 2px 12px 4px rgba(0,0,0,0.2);

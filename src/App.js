@@ -13,6 +13,7 @@ import { Profile } from "./pages/userAccount/Profile";
 import { Details } from "./pages/userAccount/details/details";
 import { Addresses } from "./pages/userAccount/addresses/addresses";
 import { Orders } from "./pages/userAccount/orders/orders";
+import { RequiresAuth } from "./components/auth/requiresAuth";
 
 
 function App() {
@@ -36,13 +37,16 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/products" element={<ProductListing/>}/>
       <Route path="/products/:productID" element={<ProductDetails/>}/>
-      <Route path="/cart" element={<Cart/>}/>
-      <Route path="/wishlist" element={<Wishlist/>}/>
       <Route path="/mockman" element={<Mockman/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
 
-      <Route path="/profile" element={<Profile/>}>
+      <Route path="/cart" element={<RequiresAuth><Cart/></RequiresAuth>}/>
+      <Route path="/wishlist" element={<RequiresAuth><Wishlist/></RequiresAuth>}/>
+
+
+
+      <Route path="/profile" element={<RequiresAuth><Profile/></RequiresAuth>}>
         <Route path='details' element={<Details/>}/>
         <Route path='addresses' element={<Addresses/>}/>
         <Route path='orders' element={<Orders/>}/>
