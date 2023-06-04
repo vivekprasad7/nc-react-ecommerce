@@ -57,3 +57,38 @@ export const updateCartQtyService = async (productID, updateType, token) =>
         data:{action: {type : updateType}},
         headers:{authorization:token},
     });
+
+// Address Services
+
+
+export const getAddressListService = async (token) => 
+    await axios({
+        method:'GET',
+        url:'/api/user/addresses',
+        headers:{authorization:token},
+    });
+
+export const addAddressService = async (address, token) => 
+    await axios({
+        method:'POST',
+        url:'/api/user/address',
+        data:{address:address},
+        headers:{authorization:token}
+    });
+
+export const editAddressService = async(address, addressID, token) =>
+    await axios({
+        method:'POST',
+        url:`/api/user/address/${addressID}`,
+        data:{address:address},
+        headers:{authorization: token},
+    });
+
+export const removeAddressService = async( addressID, token) => 
+    await axios({
+        method:'DELETE',
+        url:`/api/user/address/${addressID}`,
+        headers:{authorization:token},
+    });
+
+
