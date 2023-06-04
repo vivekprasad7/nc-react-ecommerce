@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import "./userAccount.css"
+import "./profile.css"
 
-export const UserAccount = () => {
+export const Profile = () => {
 
     const activeToggle = ({isActive}) => isActive ? 'curr-nav-item active-nav' : 'curr-nav-item inactive-nav'
 

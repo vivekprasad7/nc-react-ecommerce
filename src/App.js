@@ -9,7 +9,10 @@ import { Cart } from "./pages/cart/cart";
 import { Header } from "./components/header/header";
 import { Login } from "./pages/auth/login/login";
 import { Signup } from "./pages/auth/signup/signup";
-import { UserAccount } from "./pages/userAccount/userAccount";
+import { Profile } from "./pages/userAccount/Profile";
+import { Details } from "./pages/userAccount/details/details";
+import { Addresses } from "./pages/userAccount/addresses/addresses";
+import { Orders } from "./pages/userAccount/orders/orders";
 
 
 function App() {
@@ -38,7 +41,12 @@ function App() {
       <Route path="/mockman" element={<Mockman/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
-      <Route path="/profile" element={<UserAccount/>}/>
+
+      <Route path="/profile" element={<Profile/>}>
+        <Route path='details' element={<Details/>}/>
+        <Route path='addresses' element={<Addresses/>}/>
+        <Route path='orders' element={<Orders/>}/>
+      </Route>
 
 
       </Routes>
