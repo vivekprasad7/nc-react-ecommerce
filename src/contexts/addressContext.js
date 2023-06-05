@@ -67,9 +67,11 @@ export const AddressContextProvider = ({children}) => {
 
             if(status ===201){
                 setAddressList(data?.address)
+                console.log("edit", data )
             }
         } catch(e){
             console.error(e)
+            console.log("edit", e)
         }
     }
 
@@ -80,6 +82,7 @@ export const AddressContextProvider = ({children}) => {
 
         if (isAddressPresent){
             editAddress(checkout, isAddressPresent._id)
+            setIsAddressFormVisible(false);
         } else {
             if ( 
                 checkout.name !== "" ||
