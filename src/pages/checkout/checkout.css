@@ -1,0 +1,25 @@
+.checkout-container{
+    display: flex;
+    gap:2rem;
+    flex-wrap: wrap;
+    margin:2rem;
+}
+
+.checkout-address{
+    /* width: 50%;
+    background-color: aliceblue;
+    padding:2rem; */
+    background: #f6f9fc;
+    /* background-color: lightgreen; */
+    
+    width:50%;
+    padding: 2rem;
+    height:auto;
+    margin:10px;
+    border-radius: 20px;
+}
+
+.checkout-details{
+    margin:10px;
+    width:40%;
+}

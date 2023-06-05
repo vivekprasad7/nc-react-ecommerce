@@ -15,6 +15,7 @@ import { Addresses } from "./pages/userAccount/addresses/addresses";
 import { Orders } from "./pages/userAccount/orders/orders";
 import { RequiresAuth } from "./components/auth/requiresAuth";
 import { AddressForm } from "./components/address-form/addressForm";
+import { Checkout } from "./pages/checkout/checkout";
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
         <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "} 
         <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}  
         <NavLink to="/addressform">Address Form</NavLink>  {" "} || {" "}  
+        <NavLink to="/checkout">Checkout</NavLink>  {" "} || {" "}  
+
 
         
   
@@ -45,6 +48,8 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/addressform" element={<AddressForm/>}/>
+      <Route path="/checkout" element={<Checkout/>}/>
+
 
 
       <Route path="/cart" element={<RequiresAuth><Cart/></RequiresAuth>}/>

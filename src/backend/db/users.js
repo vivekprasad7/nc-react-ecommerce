@@ -19,8 +19,8 @@ export const users = [
       {
         _id:uuid(),
         name:"Howard Roark",
-        street:"4 Envision",
-        city:"New York",
+        street:"4 Envision Avenue",
+        city:"New York City",
         zipcode:"54321",
         state:"New York State",
         country:"United States",
