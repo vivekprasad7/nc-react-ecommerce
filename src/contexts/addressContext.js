@@ -1,4 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import {v4 as uuid} from 'uuid'
+
 import { useAuthContext } from "./authContext";
 import { addAddressService, editAddressService, getAddressDataService, removeAddressService } from "../services/dataFetchServices";
 
@@ -7,7 +9,7 @@ export const AddressContext = createContext();
 export const AddressContextProvider = ({children}) => {
 
     const {authState:{token}} = useAuthContext();
-    const [address, setAddress] = useState([]);
+    const [addressList, setAddressList] = useState([]);
     const [isAddressFormVisible, setIsAddressFormVisible] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
     const checkoutInitial = {
@@ -18,7 +20,7 @@ export const AddressContextProvider = ({children}) => {
         zipcode:"",
         state:"",
         country:"",
-        mobile:""
+        mobile:"",
     }
 
     const [ checkout, setCheckout] = useState(checkoutInitial);
@@ -28,7 +30,7 @@ export const AddressContextProvider = ({children}) => {
             const { status, data} = await getAddressDataService(token);
 
             if(status === 200){
-                setAddress(data?.address)
+                setAddressList(data?.address)
             }
         } catch(e){
             console.error(e);
@@ -40,7 +42,8 @@ export const AddressContextProvider = ({children}) => {
             const {status, data} = await addAddressService(addressInput, token)
 
             if ( status === 201){
-                setAddress(data?.address)
+                setAddressList(data?.address)
+                console.log("addAddressData",data)
             }
         } catch(e){
             console.error("addAddressData_Error",e)
@@ -51,7 +54,7 @@ export const AddressContextProvider = ({children}) => {
         try{
             const {status, data} = await removeAddressService(addressID, token);
             if ( status ===200){
-                setAddress(data?.address)
+                setAddressList(data?.address)
             }
         } catch(e){
             console.error(e)
@@ -63,10 +66,47 @@ export const AddressContextProvider = ({children}) => {
             const {status, data} = await editAddressService(addressInput, addressID, token)
 
             if(status ===201){
-                setAddress(data?.address)
+                setAddressList(data?.address)
             }
         } catch(e){
             console.error(e)
+        }
+    }
+
+    const handleAddressForm = () => {
+
+        
+        const isAddressPresent =   addressList.find((address) => address._id === checkout._id)
+
+        if (isAddressPresent){
+            editAddress(checkout, isAddressPresent._id)
+        } else {
+            if ( 
+                checkout.name !== "" ||
+                checkout.street !== "" ||
+                checkout.city !== "" ||
+                checkout.zipcode !== "" ||
+                checkout.state !== "" ||
+                checkout.country !== "" ||
+                checkout.mobile !== "" 
+            ) {
+                addAddressData({...checkout, _id:uuid()});
+                setCheckout({
+                    ...checkout,
+                    _id:"",
+                    name:"",
+                    street:"",
+                    city:"",
+                    zipcode:"",
+                    state:"",
+                    country:"",
+                    mobile:""
+                })
+            } else{
+                alert("Fill all input fields")
+            }
+            setIsAddressFormVisible(false);
+            setIsEdit(false);
         }
     }
 
@@ -83,13 +123,14 @@ export const AddressContextProvider = ({children}) => {
         addAddressData, 
         removeAddressData, 
         editAddress,
-        address,
+        addressList,
         checkout,
         setCheckout,
         isAddressFormVisible,
         setIsAddressFormVisible,
         isEdit,
         setIsEdit,
+        handleAddressForm,
         }}>{children}</AddressContext.Provider>)
 }
 

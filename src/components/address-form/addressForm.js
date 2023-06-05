@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAddressContext } from '../../contexts/addressContext'
+import {v4 as uuid} from 'uuid'
 
 export const AddressForm = () => {
     const {
         addAddressData, 
         removeAddressData, 
         editAddress,
-        address,
+        addressList,
         checkout,
         setCheckout,
         isAddressFormVisible,
         setIsAddressFormVisible,
         isEdit,
         setIsEdit,
+        handleAddressForm,
     } = useAddressContext();
 
     const checkoutInitial = {
@@ -27,8 +29,13 @@ export const AddressForm = () => {
     }
 
 
+  
+
+
   return (
-    <div className='form'>
+    <div className='form'
+    // style={{display: isAddressFormVisible ? "" : "none"}}
+    >
         <h2  >Add New Address</h2>
 
         <i
@@ -64,8 +71,8 @@ export const AddressForm = () => {
         <div className='form-input'>
                 <label for='zipcode'>Zipcode: </label>
                 <input id='zipcode' placeholder='54321'
-                value={checkout.name}
-                onChange={(e) => setCheckout({...checkout, name: e.target.value})}
+                value={checkout.zipcode}
+                onChange={(e) => setCheckout({...checkout, zipcode: e.target.value})}
                 required
                 />
         </div>
@@ -93,7 +100,7 @@ export const AddressForm = () => {
                 required
                 />
         </div>
-        <button>Add Address</button>
+        <button onClick={handleAddressForm}>{ isEdit ? "Save Address" : "Add Address"}</button>
     </div>
   )
 }

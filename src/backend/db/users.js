@@ -6,6 +6,8 @@ import { formatDate } from "../utils/authUtils";
  * Every user will have cart (Quantity of all Products in Cart is set to 1 by default), wishList by default
  * */
 
+
+
 export const users = [
   {
     _id: uuid(),
@@ -13,6 +15,18 @@ export const users = [
     lastName: "Durden",
     email: "tylerdurden@gmail.com",
     password: "tylerdurden",
+    address: [
+      {
+        _id:uuid(),
+        name:"Howard Roark",
+        street:"4 Envision",
+        city:"New York",
+        zipcode:"54321",
+        state:"New York State",
+        country:"United States",
+        mobile:"9876543210",
+      }
+    ],
     createdAt: formatDate(),
     updatedAt: formatDate(),
   },
