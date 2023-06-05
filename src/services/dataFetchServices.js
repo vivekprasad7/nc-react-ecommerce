@@ -61,7 +61,7 @@ export const updateCartQtyService = async (productID, updateType, token) =>
 // Address Services
 
 
-export const getAddressListService = async (token) => 
+export const getAddressDataService = async (token) => 
     await axios({
         method:'GET',
         url:'/api/user/addresses',
