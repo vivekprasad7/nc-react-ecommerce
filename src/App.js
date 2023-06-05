@@ -14,6 +14,7 @@ import { Details } from "./pages/userAccount/details/details";
 import { Addresses } from "./pages/userAccount/addresses/addresses";
 import { Orders } from "./pages/userAccount/orders/orders";
 import { RequiresAuth } from "./components/auth/requiresAuth";
+import { AddressForm } from "./components/address-form/addressForm";
 
 
 function App() {
@@ -28,7 +29,10 @@ function App() {
         <NavLink to="/">Home</NavLink>  {" "} || {" "}   
         <NavLink to="/login">Login</NavLink>  {" "} || {" "}  
         <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "} 
-        <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}   
+        <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}  
+        <NavLink to="/addressform">Address Form</NavLink>  {" "} || {" "}  
+
+        
   
       </nav>
 
@@ -40,6 +44,8 @@ function App() {
       <Route path="/mockman" element={<Mockman/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/addressform" element={<AddressForm/>}/>
+
 
       <Route path="/cart" element={<RequiresAuth><Cart/></RequiresAuth>}/>
       <Route path="/wishlist" element={<RequiresAuth><Wishlist/></RequiresAuth>}/>
