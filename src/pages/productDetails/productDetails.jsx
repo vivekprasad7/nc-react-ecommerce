@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { getProductById } from '../../services/productDetailsService'
 import { useNavigate, useParams } from 'react-router-dom';
 import "./productDetails.css"
+import { useCartContext } from '../../contexts/cartContext';
 
 export const ProductDetails = () => {
 
   const [singleProduct, setSingleProduct] = useState({});
+  const {addToCartHandler} = useCartContext();
+  const {addToWishlistHandler} = useCartContext();
   const {productID} = useParams();
   const navigate = useNavigate();
 
@@ -52,8 +55,8 @@ export const ProductDetails = () => {
         <p>Inclusive of all Taxes</p>
         
         <div className='buttons'>
-        <button>Add to Cart</button>
-        <button>Add to Wishlist</button>
+        <button onClick={() => addToCartHandler(singleProduct) }>Add to Cart</button>
+        <button onClick={ () => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
         </div>
 
         <ul>
