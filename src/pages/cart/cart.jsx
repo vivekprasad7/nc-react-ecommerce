@@ -4,6 +4,8 @@ import"./cart.css"
 import { useAuthContext } from '../../contexts/authContext';
 import { useCartContext } from '../../contexts/cartContext';
 import { CartTotal } from '../../components/cart-total/cartTotal';
+import { useWishlistContext } from '../../contexts/wishlistContext';
+import { isItemInWishlist } from '../../utils/isItemInWishlist';
 
 export const Cart = () => {
 
@@ -11,6 +13,9 @@ export const Cart = () => {
   const{ authState:{token}} = useAuthContext();
 
   const {cart, addToCartHandler , updateCartHandler} = useCartContext();
+  const{wishlist, addToWishlistHandler} = useWishlistContext();
+
+
 
   
 
@@ -35,7 +40,7 @@ export const Cart = () => {
             return(
               <div className="cart-product">
                 <div className='img'>
-                <button className='cart-heart'><i className='fa fa-heart'></i></button>
+                <button className={isItemInWishlist ? 'cart-hearted' : 'cart-heart'}  onClick={() =>addToWishlistHandler(item)}><i className='fa fa-heart'></i></button>
 
                   <img src={item.image} alt={item.title}  />
 

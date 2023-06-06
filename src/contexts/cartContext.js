@@ -75,14 +75,14 @@ export const CartContextProvider = ({children}) => {
 
     const addToCartHandler = (item) => {
         if(token){
-            isItemInCart(item._id, cart) ? removeFromCart(item._id, token) : addToCart(item)
+            isItemInCart(item._id, cart) ? navigate("/cart") : addToCart(item)
         } else{
             navigate("/login")
         }
     }
 
     const updateCartHandler = (item, updateType) => {
-        if (item.qty < 1){
+        if (item.qty < 2){
             removeFromCart(item._id, token)
         } else{
             (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)

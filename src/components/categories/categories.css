@@ -1,5 +1,7 @@
 
-
+.cat-container{
+    margin: 150px 0;
+}
 
 
 
@@ -21,8 +23,6 @@
 }
 
 .cat-unit{
-    width:200px;
-    position: relative;
     cursor: pointer;
 }
 
@@ -32,6 +32,10 @@
     /* height: 250px; */
     object-fit: contain;
     width: 250px;
+}
+
+.cat-unit h4{
+    text-align: center;
 }
 
 .cat-unit img:hover{
