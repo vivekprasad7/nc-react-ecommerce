@@ -15,7 +15,7 @@ export const Header = () => {
       <header className="header">
         <div className="container c_flex">
           <div className="brand-bar">
-            <Link to="/">Home</Link>
+            <h3><Link to="/"><span className="logo">cake</span>factory</Link></h3>
           </div>
           <div className="search-bar f_flex">
             <i className="fa fa-search"></i>

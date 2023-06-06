@@ -28,8 +28,8 @@
 
 .cat-unit img{
     /* border-radius: 50%; */
-    border-radius:5px;
-    height: 250px;
+    border-radius:10px;
+    /* height: 250px; */
     object-fit: contain;
     width: 250px;
 }

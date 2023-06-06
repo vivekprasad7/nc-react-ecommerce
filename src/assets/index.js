@@ -1,3 +1,6 @@
+const banner = "https://res.cloudinary.com/darl8idou/image/upload/v1686057942/cakefactory/more-img-norah_bq8oa3.webp";
+
+
 const image1 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp";
 const image2 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp";
 const image3 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp";
@@ -28,4 +31,4 @@ const pastry5 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/c
 
 export {cake1, cake2, cake3, cake4, cake5, cake6,cake7, cake8, cake9, cake10, muffin1, muffin2, muffin3, muffin4, muffin5, pastry1, pastry2,pastry3, pastry4, pastry5}
 
-export {image1, image2, image3} 
+export {image1, image2, image3, banner} 
