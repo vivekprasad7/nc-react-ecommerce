@@ -16,7 +16,7 @@ export const categories = [
   },
   {
     _id: "d5d26f13-561e-42e2-83d2-fd868bb7e78b",
-    categoryName: "Muffins and Desserts",
+    categoryName: "Muffins & Desserts",
     description:
       "Bite into our delightful Muffins & you will experience a burst of natural flavor and freshness of ingredients that literally melts in your mouth. ",
     image:muffin1,
