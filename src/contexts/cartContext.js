@@ -53,6 +53,7 @@ export const CartContextProvider = ({children}) => {
            if( status === 200){
             setCart(data?.cart)
             console.log("remove_from_cart", cart)
+            
            }
         } catch(e){
             console.error(e)
@@ -73,6 +74,12 @@ export const CartContextProvider = ({children}) => {
         }
     }
 
+    const removeCartHandler = (item) => {
+        if(token){
+            removeFromCart(item._id, token)
+        }
+    }
+
     const addToCartHandler = (item) => {
         if(token){
             isItemInCart(item._id, cart) ? navigate("/cart") : addToCart(item)
@@ -82,7 +89,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const updateCartHandler = (item, updateType) => {
-        if (item.qty < 2){
+        if (item.qty < 1){
             removeFromCart(item._id, token)
         } else{
             (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
@@ -105,7 +112,7 @@ export const CartContextProvider = ({children}) => {
 
 
 
-    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery}}>{children}</CartContext.Provider>)
+    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery, removeCartHandler}}>{children}</CartContext.Provider>)
 }
 
 export const useCartContext = () => useContext(CartContext);

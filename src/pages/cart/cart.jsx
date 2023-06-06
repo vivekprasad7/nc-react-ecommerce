@@ -12,7 +12,7 @@ export const Cart = () => {
   const navigate = useNavigate();
   const{ authState:{token}} = useAuthContext();
 
-  const {cart, addToCartHandler , updateCartHandler} = useCartContext();
+  const {cart, addToCartHandler , updateCartHandler, removeCartHandler} = useCartContext();
   const{wishlist, addToWishlistHandler} = useWishlistContext();
 
 
@@ -40,7 +40,7 @@ export const Cart = () => {
             return(
               <div className="cart-product">
                 <div className='img'>
-                <button className={isItemInWishlist ? 'cart-hearted' : 'cart-heart'}  onClick={() =>addToWishlistHandler(item)}><i className='fa fa-heart'></i></button>
+                <button className={isItemInWishlist(item._id, wishlist) ? 'cart-hearted' : 'cart-heart'}  onClick={() =>addToWishlistHandler(item)}><i className='fa fa-heart'></i></button>
 
                   <img src={item.image} alt={item.title}  />
 
@@ -61,7 +61,7 @@ export const Cart = () => {
                     <button onClick={() => updateCartHandler(item, "inc")}><i className='fa fa-plus'></i></button>
                     <div>{item.qty}</div>
                     <button onClick={() => updateCartHandler(item, "dec")}><i className='fa fa-minus'></i></button>
-                    <button onClick={() => addToCartHandler(item)}><i className='fa fa-trash'></i></button>
+                    <button onClick={() => removeCartHandler(item)}><i className='fa fa-trash'></i></button>
 
 
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useAddressContext } from '../../contexts/addressContext'
 import {v4 as uuid} from 'uuid'
+import "./addressForm.css"
 
 export const AddressForm = () => {
     const {
@@ -33,7 +34,7 @@ export const AddressForm = () => {
 
 
   return (
-    <div className='form'
+    <div className='form-address'
     // style={{display: isAddressFormVisible ? "" : "none"}}
     >
         <h2  >Add New Address</h2>
