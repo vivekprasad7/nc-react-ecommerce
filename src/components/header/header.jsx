@@ -27,7 +27,7 @@ export const Header = () => {
           </div>
           <nav className="nav-icons c_flex">
             <div className="nav-icon">
-              <Link to="/user">
+              <Link to="/profile">
                 <i
                   style={{ fontSize: "20px", color: "black" }}
                   className="fa fa-user icon-circle"

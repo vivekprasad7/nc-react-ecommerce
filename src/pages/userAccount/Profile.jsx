@@ -13,7 +13,7 @@ export const Profile = () => {
             <h2 className='user-account-head'>My Account</h2>
             <div className='user-profile-box'>
                 <div className='profile-tabs'>
-                    <NavLink to="/profile/details" className={activeToggle}>Profile</NavLink>
+                    <NavLink to="/profile/" className={activeToggle}>Profile</NavLink>
                     <NavLink to="/profile/addresses" className={activeToggle}>Addresses</NavLink>
                     <NavLink to="/profile/orders" className={activeToggle}>Orders</NavLink>
                 </div>
