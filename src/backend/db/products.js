@@ -22,14 +22,14 @@ export const products = [
     categoryName: "Cakes",
     isInStock: true,
     weight: "1 kg",
-    isBestSeller: true,
+    isBestSeller: false,
     priceCategory: "under500",
     type:"Cake",
     desc:"The Mango Tropical Cake is an ideal dessert for mango lovers and those seeking a unique twist on traditional cakes. It is perfect for special occasions, celebrations, or simply as a decadent treat to savor any time of the year. (6 serving,169 calories each, protein-3 grams each, carbs-33 grams each)",
   },
   {
     _id: "b51abe1b-e546-4a5f-b17a-94aa0aa75652",
-    title: "Butterscotch Overloaded Cake",
+    title: "Butterscotch Cake",
     image:cake2,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/butter1_zjd04q.jpg",
     ratings: {
@@ -48,7 +48,7 @@ export const products = [
   },
   {
     _id: "181e8e28-afb6-4a53-ab2d-f9f7348b44a9",
-    title: "Rasmalai Cake",
+    title: "Dutch Chocolate Cake",
     image:cake3,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/rasmalai-cake_gfbhfb.jpg",
     ratings: {
@@ -63,7 +63,7 @@ export const products = [
     isBestSeller: false,
     priceCategory: "under500",
     type:"Cake",
-    desc:"Yummy Indian fusion Rasmalai cake - a blend of traditional indian Rasmalai sweet and western dessert. [Vanilla+Rasmalai+Kesar milk] ( 6 Serving , 211 calories each, Protein-4g, Carbs-31g each) ",
+    desc:"Want to go classic for your celebration.What's better than a Chocolate Truffle Cake! This luscious, soft, moist Chocolate Cake is coated with a ganache made from Chocolate & Fresh Cream. ",
   },
   {
     _id: "b2ddef51-d28f-4e9c-8d30-e3c119d7272f",
@@ -86,7 +86,7 @@ export const products = [
   },
   {
     _id: "66880a00-bc39-40e2-92eb-d3afdd25b5cf",
-    title: "Jungle Safari Fondant Cake",
+    title: "Divine Pineapple Cake",
     image:cake5,
     imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/jungle-fondant-cake_japot9.jpg",
     ratings: {
@@ -101,7 +101,7 @@ export const products = [
     isBestSeller: false,
     priceCategory: "under1500",
     type:"Cake",
-    desc:"Invite some wilderness in your birthday party by ordering this jungle safari fondant theme cake, this cake is filled with animals which cherishes kids and greenery around signifies the nature of forest. You can choose the flavor which you like most. All our cakes are made fresh and with love, with No added preservatives, all-natural, and best-quality ingredients safe for children and adults.",
+    desc:" The evergreen Pineapple Cake with real juicy pineapple chunks and delicious cream, makes this one a delicious fit for all your special occasions!",
   },
   {
     _id: "f17bff86-995c-45fa-827a-902c54f1cdd8",

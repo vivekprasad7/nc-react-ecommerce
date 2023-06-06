@@ -3,6 +3,7 @@
     height: 400px;
     padding:100px;
     position: relative;
+    display: flex;
 }
 
 .home-cta{
@@ -27,6 +28,8 @@
     color: white;
     margin-top: 20px;
 }
+
+/* /// */
 
 .category-container{
     padding:50px;

@@ -45,6 +45,10 @@
   padding: 0 0.4rem;
 }
 
+.best-none{
+  display: none;
+}
+
 .card-ratings {
   /* background-color: #20aa20; */
   background-color: #1dbf73;

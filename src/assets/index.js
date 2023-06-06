@@ -3,15 +3,16 @@ const image2 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/ca
 const image3 = "https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp";
 
 const cake1 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango1_fwaa0l.webp";
-const cake2 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/butter1_zjd04q.jpg"
-const cake3 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/rasmalai-cake_gfbhfb.jpg";
-const cake4 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/chocolate-truffle-cake_gaygcj.jpg";
-const cake5 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/jungle-fondant-cake_japot9.jpg";
-const cake6 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/red-velvet-egg-cake_m0v2hi.jpg";
-const cake7 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/strawberry-cheesecake-500gm-_tqhdzv.jpg";
-const cake8 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango-fruit-eggless-cake_dpawsn.jpg";
-const cake9 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/french-blueberry-cheese-cake-500gm-_dhxiff.jpg";
-const cake10 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/black-forest-eggless-cake_ywqqug.jpg";
+// const cake2 = "https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/butter1_zjd04q.jpg"
+const cake2 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/9d12b70bdfe58cd19789410f736322c4"
+const cake3 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/db11bf666d4984c09733ce0d39f5cbc3";
+const cake4 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/5e227bbc23051ecd6f64ef4aac0d8163";
+const cake5 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/02220269bc213a59759b7a24f0cbfbfe";
+const cake6 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/04c94821a9bc17881cbe6c9275a4a961";
+const cake7 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/06fc37f1045f1547ad8b70349246ecc2";
+const cake8 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/02220269bc213a59759b7a24f0cbfbfe";
+const cake9 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/96846555c7f140aaeabf25ef299f3ce8";
+const cake10 = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/2a46ad27419c5d191a4604ccfb11e945";
 
 const muffin1 = "https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin1-choco_zz0cxs.webp";
 const muffin2 = "https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin2_zmisrt.webp";

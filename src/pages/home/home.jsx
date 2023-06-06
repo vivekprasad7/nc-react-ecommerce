@@ -2,19 +2,23 @@ import React from 'react'
 import {Link} from "react-router-dom";
 import "./home.css"
 import { Categories } from '../../components/categories/categories';
+import { muffin1 } from '../../assets';
 
 export const Home = () => {
   return (
     <>
-    <div className='home-container'>
-      <div className='img-bg'>
+    <main className='home-container'>
+      <section className='banner-text'>
       <div className='home-cta'>
-        <h2>Explore Heaven</h2>
+        <h2>Indulge Without Regret</h2>
         <button className='home-btn'>Explore Now</button>
       </div>
-      </div>
+      </section>
+      <section className='banner-img'>
+        <img src={muffin1} />
+      </section>
       
-    </div>
+    </main>
 
     <div className='category-container'>
       <h2 className='cat-heading'>Categories</h2>
