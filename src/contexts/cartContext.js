@@ -3,6 +3,7 @@ import { getCartService, addToCartService, removeCartService, updateCartQtyServi
 import { useAuthContext } from "./authContext";
 import { useNavigate } from "react-router-dom";
 import { isItemInCart } from "../utils/isItemInCart";
+import { toast } from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -83,17 +84,24 @@ export const CartContextProvider = ({children}) => {
     const addToCartHandler = (item) => {
         if(token){
             isItemInCart(item._id, cart) ? navigate("/cart") : addToCart(item)
+            toast.success("Added to Cart")
         } else{
             navigate("/login")
         }
     }
 
     const updateCartHandler = (item, updateType) => {
-        if (item.qty < 1){
+        if(item.qty === 1){
             removeFromCart(item._id, token)
-        } else{
-            (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
-        }   
+
+        } else {
+            if (item.qty <= 1){
+                removeFromCart(item._id, token)
+            } else{
+                (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
+            }   
+        }
+       
     }
 
     const {totalPrice, totalDiscount, totalDelivery} = cart?.reduce((acc,curr) =>{

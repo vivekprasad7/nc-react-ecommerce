@@ -54,7 +54,7 @@ export const AddressForm = () => {
         </div>
         <div className='form-input'>
                 <label for='street'>Street: </label>
-                <input id='street' placeholder='4 Envision Avenue'
+                <input id='street' placeholder='Street'
                 value={checkout.street}
                 onChange={(e) => setCheckout({...checkout, street: e.target.value})}
                 required
@@ -62,8 +62,7 @@ export const AddressForm = () => {
         </div>
      
         <div className='form-input'>
-                <label for='city'>City: </label>
-                <input id='city' placeholder='New York City'
+                <input id='city' placeholder='City'
                 value={checkout.city}
                 onChange={(e) => setCheckout({...checkout, city: e.target.value})}
                 required

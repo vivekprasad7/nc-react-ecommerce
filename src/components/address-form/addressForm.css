@@ -2,3 +2,9 @@
     margin:auto;
     position: fixed;
 } */
+
+.form-address{
+    background-color: #ededed;
+    border-radius: 20px;
+    padding:1rem;
+}

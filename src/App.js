@@ -16,6 +16,7 @@ import { Orders } from "./pages/userAccount/orders/orders";
 import { RequiresAuth } from "./components/auth/requiresAuth";
 import { AddressForm } from "./components/address-form/addressForm";
 import { Checkout } from "./pages/checkout/checkout";
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
@@ -65,6 +66,13 @@ function App() {
 
 
       </Routes>
+     <Toaster
+        position="top-right"
+        reverseOrder={false}
+        containerStyle={{
+          top: "5rem",
+        }}
+      />
       
     </div>
   );

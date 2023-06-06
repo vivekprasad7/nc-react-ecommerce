@@ -2,6 +2,7 @@ import React from 'react'
 import { useAddressContext } from '../../../contexts/addressContext'
 import { AddressForm } from '../../../components/address-form/addressForm'
 // import { useNavigate } from 'react-router-dom';
+import "./addresses.css"
 
 export const Addresses = () => {
   const {
@@ -70,7 +71,7 @@ export const Addresses = () => {
           }}>Add Address</button>
       </div>
     </div>
-    {isAddressFormVisible && <AddressForm/>}
+    {isAddressFormVisible && <div className='address-modal'><AddressForm/></div> }
 
     </>
   )

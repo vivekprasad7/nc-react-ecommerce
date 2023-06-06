@@ -20,7 +20,7 @@ export const Header = () => {
           <div className="search-bar f_flex">
             <i className="fa fa-search"></i>
             <input
-              type="text"
+              type="search"
               placeholder="Search Cakes, Muffins, Desserts..."
               onChange={(e) => filterDispatch({type:"FILTER_BY_SEARCH", payload:e.target.value})}
             />
