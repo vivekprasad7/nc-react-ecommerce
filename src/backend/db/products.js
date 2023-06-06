@@ -41,7 +41,7 @@ export const products = [
     categoryName: "Cakes",
     isInStock: true,
     weight: "1 kg",
-    isBestSeller: true,
+    isBestSeller: false,
     priceCategory: "under1000",
     type:"Cake",
     desc:"Good old butterscotch cake - just overload of it to give you an unmatched taste. Best choice for Birthday cake or Anniversary cake. (Vanilla Sponge + Butterscotch nuts + Butterscotch crush) (6 Serving, 152 calories each, protein-3g each, carbs-29g each)",

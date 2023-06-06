@@ -32,12 +32,12 @@ export const ProductCard = ({item}) => {
   // }
 
 
-    const {_id, title, image, isBestseller, isInStock, price, originalPrice, ratings } = item
+    const {_id, title, image, isBestSeller, isInStock, price, originalPrice, ratings } = item
     return (
     <>
     <div className='product-card'>
         <img src={image} onClick={() => navigate(`/products/${_id}`)} />
-        <span className={isBestseller ? 'card-best' : 'best-none'}>Best Seller</span>
+        <span className={isBestSeller ? 'card-best' : 'best-none'}>Best Seller</span>
         <span onClick={ () => addToWishlistHandler(item)}className={isItemInWishlist(_id, wishlist) ? 'card-hearted' : 'card-heart'}role="button" disabled={true }><i className="fa fa-heart wishlist-circle" aria-hidden="true"></i> </span>
         <div className='card-info'>
         <h4 className='card-title'>{title}</h4>
