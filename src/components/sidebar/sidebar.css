@@ -28,6 +28,29 @@
 }
 
 
+.sidebar-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-heading{
+    letter-spacing: 1px;
+}
+
+.sidebar-btn{
+    border: none;
+    color: black;
+    border-radius: 20px;
+    width:80px;
+    font-family: Poppins;
+}
+
+.sidebar-btn:hover{
+    background-color: black;
+    color: #fff;
+}
+
+
 
 .vertical-flex{
     display: flex;
@@ -48,4 +71,6 @@
 }
 
 
-   
+.sidebar label{
+    padding-right: 1px;
+}

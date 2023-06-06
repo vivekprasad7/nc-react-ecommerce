@@ -15,10 +15,15 @@ export const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <h4>Filter Products</h4>
+      <div className="sidebar-title">
+      <h3 className="sidebar-heading">FILTERS</h3>
+
       <span>
-        <button onClick={handleClearAll}>Clear Filters</button>
+        <button className='sidebar-btn' onClick={handleClearAll}>Reset</button>
       </span>
+
+      </div>
+      
 
       <div className="price-filter">
         <h4>Price</h4>

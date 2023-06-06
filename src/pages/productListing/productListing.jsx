@@ -21,8 +21,6 @@ export const ProductListing = () => {
 if (productLoading) {return<><p>Loading...</p></>} else
   return (
     <>
-    <div>ProductListing</div>
-    <h2>Products Listing</h2>
     <div className='product-listing-page'>
     <Sidebar/>
     <div className='products-container'>

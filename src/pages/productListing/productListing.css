@@ -1,6 +1,9 @@
 .product-listing-page{
     display: flex;
+    padding:10px;
+    margin-top: 20px;
 }
+
 
 .products-container{
     display: flex;
