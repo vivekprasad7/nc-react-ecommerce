@@ -1,9 +1,11 @@
 import React from 'react'
 import "./cartTotal.css"
 import { useCartContext } from '../../contexts/cartContext'
+import { useNavigate } from 'react-router-dom'
 
 export const CartTotal = () => {
     const {totalPrice, totalDiscount, totalDelivery} = useCartContext()
+    const navigate = useNavigate();
 
     const totalAmount = totalPrice - (totalDiscount + totalDelivery);
   return (
@@ -29,7 +31,7 @@ export const CartTotal = () => {
         </div>
         <hr></hr>
         <div className='cart-checkout-btn'>
-            <button>Checkout</button>
+            <button onClick={() => navigate("/checkout")}>Checkout</button>
             <p className='total-savings'>You will save {totalDiscount} on this order</p>
         </div>
 

@@ -24,7 +24,8 @@ export const CheckoutCard = () => {
           </p>
         </div>
         
-            {cart.map((item) => {
+        <div>
+        {cart.map((item) => {
               return (
                 <>
                   <div key={item._id} className="d_flex">
@@ -34,6 +35,8 @@ export const CheckoutCard = () => {
                 </>
               );
             })}
+        </div>
+          
         
         <hr />
         <div className="d_flex">
