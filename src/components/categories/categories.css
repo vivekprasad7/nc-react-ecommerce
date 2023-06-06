@@ -1,0 +1,38 @@
+
+
+
+
+
+
+.cat-heading{
+    text-align: center;
+}
+
+
+
+.cat-cards{
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cat-unit{
+    width:200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cat-unit img{
+    border-radius: 50%;
+    height: 200px;
+    object-fit: fill;
+    width: 200px;
+}
+
+.cat-unit img:hover{
+    scale: 1.2;
+}

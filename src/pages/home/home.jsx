@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import "./home.css"
+import { Categories } from '../../components/categories/categories';
 
 export const Home = () => {
   return (
@@ -31,6 +32,7 @@ export const Home = () => {
       </div>
 
     </div>
+    <Categories/>
 
     <div className='footer'>
       <section className='footer-left foot'>
