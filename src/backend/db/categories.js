@@ -16,14 +16,14 @@ export const categories = [
   },
   {
     _id: "d5d26f13-561e-42e2-83d2-fd868bb7e78b",
-    categoryName: "Muffins and Pastries",
+    categoryName: "Muffins and Desserts",
     description:
       "Bite into our delightful Muffins & you will experience a burst of natural flavor and freshness of ingredients that literally melts in your mouth. ",
     image:muffin1,
   },
   {
     _id: "c149c9ee-37c4-40bf-9653-c3d3e841017b",
-    categoryName: "Desserts",
+    categoryName: "Pastries",
     description:
       "Surprise yourself with sweetness of delicacies and falvors to bring your childhood memories back",
     image:pastry1,
