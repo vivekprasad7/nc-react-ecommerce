@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useAuthContext } from "./authContext";
 import { getWishlistService, addToWishlistService, removeWishlistService } from "../services/dataFetchServices";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 // import { useDataContext } from "./dataContext";
 
 export const WishlistContext = createContext();
@@ -82,7 +83,10 @@ export const WishlistContextProvider = ({children}) => {
     const addToWishlistHandler = (item) =>{
         if(token){
 
-          isItemInWishlist(item._id, wishlist) ?  removeFromWishlist(item._id) :  addToWishlist( item)
+         if (isItemInWishlist(item._id, wishlist))   {removeFromWishlist(item._id); toast.success("Item removed from wishlist.")} else {
+            addToWishlist( item);
+            toast.success("Item added to Wishlist.")
+         }
     
         } else {
           navigate("/login")

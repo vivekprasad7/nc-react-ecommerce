@@ -19,19 +19,6 @@ export const ProductCard = ({item}) => {
 
   const {dataDispatch} = useDataContext();
 
-  
-
-  // const addToWishlistHandler = (item) =>{
-  //   if(token){
-  //     isItemInWishlist(item._id, wishlist) ? setWishlist(wishlist) : addToWishlist( item)
-
-  //   } else {
-  //     navigate("/login")
-  //   }
-
-  // }
-
-
     const {_id, title, image, isBestSeller, isInStock, price, originalPrice, ratings } = item
     return (
     <>

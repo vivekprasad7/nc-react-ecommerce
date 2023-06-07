@@ -17,21 +17,12 @@ export const DataContextProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const initialData = {
-    // products: productData,
     cartData: [],
     wishlistData: [],
   };
 
   const [dataState, dataDispatch] = useReducer(dataReducer, initialData);
 
-
-//   useEffect(()=>{
-//     if(token){
-//         const wishlistRes = 
-//     }
-//   }, [token])
-
- 
 
 
 

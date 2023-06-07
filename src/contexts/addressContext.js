@@ -3,6 +3,7 @@ import {v4 as uuid} from 'uuid'
 
 import { useAuthContext } from "./authContext";
 import { addAddressService, editAddressService, getAddressDataService, removeAddressService } from "../services/dataFetchServices";
+import { toast } from "react-hot-toast";
 
 export const AddressContext = createContext();
 
@@ -105,7 +106,11 @@ export const AddressContextProvider = ({children}) => {
                     country:"",
                     mobile:""
                 })
+                toast.success("Fill all input fields")
+
             } else{
+                toast.error("Fill all input fields")
+
                 alert("Fill all input fields")
             }
             setIsAddressFormVisible(false);

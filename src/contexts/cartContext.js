@@ -94,8 +94,11 @@ export const CartContextProvider = ({children}) => {
        
             if (item.qty < 1){
                 removeFromCart(item._id, token)
+                toast.success("Removed From Cart")
             } else{
                 (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
+                toast.success("Updated Quantity in Cart")
+
             }   
         
     }

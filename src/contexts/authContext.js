@@ -2,6 +2,7 @@ import { createContext, useContext, useReducer, useState } from "react";
 import { authReducer } from "../reducers/authReducer";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export const AuthContext = createContext();
 
@@ -42,6 +43,8 @@ export const AuthContextProvider = ({children}) => {
                 localStorage.setItem("token", data?.encodedToken)
                 localStorage.setItem("current_user", data?.foundUser?.firstName)
                 console.log(data);
+                toast.success("Login Successful")
+
             }
         } catch(e){
             console.error(e);
@@ -70,6 +73,8 @@ export const AuthContextProvider = ({children}) => {
                 localStorage.setItem("token", data?.encodedToken)
                 localStorage.setItem("new_user", data?.createdUser?.email)
                 console.log(data)
+                toast.success("New User Created")
+
             }
         } catch(e){
             console.error(e);
