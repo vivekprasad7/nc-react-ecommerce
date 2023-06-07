@@ -1,0 +1,8 @@
+.checkout-address-list{
+    background-color: #fff;
+    display: flex;
+    padding:12px;
+    margin: 10px;
+    gap:1rem;
+    border-radius: 9px;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Addresses } from '../userAccount/addresses/addresses'
 import { CheckoutCard } from '../../components/checkout-card/checkoutCard'
 import "./checkout.css"
+import { SelectAddress } from '../../components/select-address/selectAddress'
 
 export const Checkout = () => {
     
@@ -10,8 +10,7 @@ export const Checkout = () => {
     <div className='checkout-container'>
 
       <div className='checkout-address'>
-        <h2>Saved Addresses</h2>
-         <Addresses/>
+         <SelectAddress/>
       </div>
 
       <div className='checkout-details'>

@@ -64,6 +64,20 @@ export const CheckoutCard = () => {
         <p><b>{totalAmount < 0 ? 0 : totalAmount}</b></p>
         </div>
         <hr></hr>
+        <div className='deliver-to'>
+        {Object.values(checkout)[0].length > 0 ? (
+          <div className="delivery-address">
+            <p>
+              <b>Deliver to: </b>{checkout.name}
+            </p>
+            <div className="final-address">
+              <p><b>Address:</b> {checkout.street}, {checkout.city}, {checkout.state}</p>
+              <p>{checkout.pincode}</p>
+            </div>
+          </div>
+        ) : <p>No Address Found</p>}
+
+        </div>
         <div className='cart-checkout-btn'>
             <button>Checkout</button>
             <p className='total-savings'>You will save {totalDiscount} on this order</p>
