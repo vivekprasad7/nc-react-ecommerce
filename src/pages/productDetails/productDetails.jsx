@@ -3,12 +3,13 @@ import { getProductById } from '../../services/productDetailsService'
 import { useNavigate, useParams } from 'react-router-dom';
 import "./productDetails.css"
 import { useCartContext } from '../../contexts/cartContext';
+import { useWishlistContext } from '../../contexts/wishlistContext';
 
 export const ProductDetails = () => {
 
   const [singleProduct, setSingleProduct] = useState({});
   const {addToCartHandler} = useCartContext();
-  const {addToWishlistHandler} = useCartContext();
+  const {addToWishlistHandler} = useWishlistContext();
   const {productID} = useParams();
   const navigate = useNavigate();
 
@@ -56,7 +57,7 @@ export const ProductDetails = () => {
         
         <div className='buttons'>
         <button onClick={() => addToCartHandler(singleProduct) }>Add to Cart</button>
-        <button onClick={ () => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
+        <button onClick={() => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
         </div>
 
         <ul>
