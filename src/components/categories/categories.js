@@ -11,7 +11,7 @@ export const Categories = () => {
   return (
    <>
        <div className='cat-container'>
-        <h2 className='cat-heading'>Categories</h2>
+        <h2 className='cat-heading'>CATEGORIES</h2>
         <div className='cat-cards'>
         {
             categoryData.map((category) => (
@@ -26,7 +26,7 @@ export const Categories = () => {
                   }}
                 className='cat-unit' >
                 <img src={category.image} alt={category.categoryName} />
-                <h4>{category.categoryName}</h4>
+                <h4 className='cat-name'>{category.categoryName}</h4>
                 </div>
             ))
         }
