@@ -68,7 +68,7 @@ export const Sidebar = () => {
                       payload: categoryName,
                     })
                   }
-                />
+                />{" "}
                 {categoryName}
               </label>
             </div>
@@ -94,7 +94,7 @@ export const Sidebar = () => {
                         payload: e.target.value,
                       })
                     }
-                  />
+                  />{" "}
                   {rating} Stars and Above
                 </label>
               </li>
@@ -127,7 +127,8 @@ export const Sidebar = () => {
               onChange={() =>
                 filterDispatch({ type: "SORT_BY_PRICE", payload: "HTL" })
               }
-            />Price: High to Low
+            />{" "}{" "}
+            Price: High to Low
           </label>
         </div>
       </div>

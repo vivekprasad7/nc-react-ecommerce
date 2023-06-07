@@ -54,7 +54,7 @@
   background-color: #1dbf73;
   margin: 10px;
   width: 1rem;
-  padding: 1px 20px;
+  padding: 3px 20px;
   border-radius: 10px;
   color: white;
   font-size: 0.8rem;
@@ -105,12 +105,12 @@
 }
 
 .card-price {
-  margin: 10px;
+  margin: 10px ;
+  font-size: 0.8rem;
+  
 }
 
-.strike {
-  text-decoration: line-through;
-}
+
 
 .card-btn {
   padding: 0.5rem;
@@ -121,6 +121,7 @@
   border-radius: 10px;
   color: #1dbf73;
   cursor: pointer;
+  margin-top: 13px;
 }
 
 .added-card-btn{
@@ -144,4 +145,19 @@
 .card-btn:hover {
   background-color: #1dbf73;
   color: #fff;
+}
+
+.rupee-price{
+  color: rgb(218, 171, 83);
+  letter-spacing: 0.1px;
+}
+
+.rupee-strike{
+  color:lightslategray;
+  text-decoration: line-through;
+}
+
+.ratings-count{
+  display: none;
+  color:lightslategray;
 }
