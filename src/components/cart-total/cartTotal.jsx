@@ -7,7 +7,7 @@ export const CartTotal = () => {
     const {totalPrice, totalDiscount, totalDelivery} = useCartContext()
     const navigate = useNavigate();
 
-    const totalAmount = totalPrice - (totalDiscount + totalDelivery);
+    const totalAmount = +totalPrice - (+totalDiscount + +totalDelivery);
   return (
     <div className='cart-total-area'>
         <h2>Price Details</h2>
@@ -27,7 +27,7 @@ export const CartTotal = () => {
         <hr></hr>
         <div className='cart-total-price'>
         <p><b>Total Amount</b></p>
-        <p><b>{totalAmount < 0 ? 0 : totalAmount}</b></p>
+        <p><b>₹ {totalAmount < 0 ? 0 : totalAmount}</b></p>
         </div>
         <hr></hr>
         <div className='cart-checkout-btn'>

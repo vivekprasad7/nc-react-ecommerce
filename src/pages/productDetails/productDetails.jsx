@@ -48,22 +48,22 @@ export const ProductDetails = () => {
       
       <div className='details'>
         <h2>{title}</h2>
-        <p>Details: {desc}</p>
+        <p className='desc'>Details: {desc}</p>
 
         <p><span className='card-ratings'>{ratings?.rate} <i class="fa fa-star"></i></span> ({ratings?.count})</p>
       
-        <span className='card-price'>{price} <span className='strike'>{originalPrice}</span> </span>
-        <p>Inclusive of all Taxes</p>
+        <p className='card-price'> <span className='rupee-price'>₹ <i class="fa fa-indian-rupee-sign"></i>{price}</span> <span className='rupee-strike'>{originalPrice}</span></p>
+        {/* <p>Inclusive of all Taxes</p> */}
         
         <div className='buttons'>
         <button onClick={() => addToCartHandler(singleProduct) }>Add to Cart</button>
         <button onClick={() => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
         </div>
 
-        <ul>
+        {/* <ul>
           <li>Eggless/Vegetarian</li>
           <li>Weight : {weight} kg</li>
-        </ul>
+        </ul> */}
 
     </div>
    

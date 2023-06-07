@@ -6,3 +6,17 @@
     gap:1rem;
     border-radius: 9px;
 }
+
+.select-address-btn{
+    border: none;
+    color: black;
+    border-radius: 20px;
+    width:80px;
+    font-family: Poppins;
+    width: fit-content;
+}
+
+.select-address-btn:hover{
+    background-color: black;
+    color: #fff;
+}

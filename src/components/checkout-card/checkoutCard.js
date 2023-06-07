@@ -9,6 +9,9 @@ export const CheckoutCard = () => {
 
 
     const totalAmount = totalPrice - (totalDiscount + totalDelivery);
+
+
+
   return (
     <>
     <div>
@@ -41,7 +44,7 @@ export const CheckoutCard = () => {
         <hr />
         <div className="d_flex">
           <h4>Order Details</h4>
-          <p>5{}</p>
+          <p></p>
         </div>
         <hr />
 
@@ -61,7 +64,7 @@ export const CheckoutCard = () => {
         <hr></hr>
         <div className='cart-total-price'>
         <p><b>Total Amount</b></p>
-        <p><b>{totalAmount < 0 ? 0 : totalAmount}</b></p>
+        <p><b>Rs. {totalAmount < 0 ? 0 : totalAmount}</b></p>
         </div>
         <hr></hr>
         <div className='deliver-to'>

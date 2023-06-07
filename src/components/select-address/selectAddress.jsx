@@ -43,6 +43,7 @@ export const SelectAddress = () => {
             })
         }
         <button
+        className='select-address-btn'
         onClick={() => {
             setIsAddressFormVisible(true);
             setCheckout({

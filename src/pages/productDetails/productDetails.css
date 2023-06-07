@@ -36,6 +36,14 @@
     gap:0.5rem;
 }
 
+.details p {
+    font-size: 0.8rem;
+}
+
+.desc{
+    font-size: 0.8rem;
+}
+
 button {
     padding: 0.5rem;
     background-color: #fff;
@@ -51,3 +59,4 @@ button {
     background-color: #1dbf73;
     color: #fff;
   }
+
