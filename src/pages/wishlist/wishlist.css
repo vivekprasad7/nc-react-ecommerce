@@ -5,3 +5,8 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.empty-wishlist{
+    padding:200px;
+    text-align: center;
+}

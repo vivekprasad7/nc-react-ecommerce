@@ -10,6 +10,7 @@ export const Wishlist = () => {
   if (isLoading) {return(<p>Loading...</p>)} else
   return (
     <div>
+      {wishlist.length === 0 ? <div className='empty-wishlist'>"Your Wishlist is Empty." </div>: ""}
       <div className='wishlist-container'>
         {
           wishlist?.map((item) => {
