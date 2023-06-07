@@ -22,7 +22,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="App">
-      <nav style={{textAlign:"center", backgroundColor:"orange", color:"white"}}>
+      <nav style={{textAlign:"center", backgroundColor:"orange", color:"white", display:"none"}}>
         <NavLink to="/">Home</NavLink>  {" "} || {" "}
         <NavLink to="/mockman">Mockman</NavLink> {" "} || {" "}
         <NavLink to="/products">Products</NavLink>  {" "} || {" "}
