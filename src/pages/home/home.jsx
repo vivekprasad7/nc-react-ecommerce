@@ -3,6 +3,8 @@ import {Link, useNavigate} from "react-router-dom";
 import "./home.css"
 import { Categories } from '../../components/categories/categories';
 import { banner} from '../../assets';
+import { Featured } from '../../components/featured/featured';
+
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -11,8 +13,9 @@ export const Home = () => {
     <main className='home-container'>
       <section className='banner-text'>
       <div className='home-cta'>
-        <h2>Indulge Without Regret</h2>
-        <button onClick={() => navigate("/products")}className='home-btn'>Explore Now</button>
+        <h2 className='cta-main'>Indulge</h2>
+        <h2 className='cta-rem'>Without Regret!!</h2>
+        <button onClick={() => navigate("/products")}className='home-btn'>ORDER NOW</button>
       </div>
       </section>
       <section className='banner-img'>
@@ -25,6 +28,8 @@ export const Home = () => {
     <Categories/>
     </div>
 
+    <Featured/>
+
     <div className='footer'>
       <section className='footer-left foot'>
       <div className="brand-footer">
@@ -34,7 +39,7 @@ export const Home = () => {
         <p>© 2023. All rights reserved.</p>
       </section>
       <section className='footer-mid foot'>
-        <h3>Links</h3>
+        <h3>LINKS</h3>
         <ul>
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/wishlist">Wishlist</Link></li>
@@ -42,16 +47,17 @@ export const Home = () => {
         </ul>
       </section>
       <section className='footer-right foot'>
-        <h3>Socials</h3>
+        <h3>SOCIALS</h3>
         <ul>
-          <li> <a href="https://github.com/vivekprasad7" target="_blank" rel="noreferrer">
-                <i class="fa fa-github"></i> Github
+          <li>Github {" "}
+            <a href="https://github.com/vivekprasad7" target="_blank" rel="noreferrer">
+                <i class="fa fa-github"></i> 
               </a>
           </li>
-          <li>
+          <li>Twitter {" "}
           <a href="https://twitter.com/nxvivek" target="_blank" rel="noreferrer">
-                <i class="fa fa-twitter fa-lg"></i> Twitter
-              </a>
+                <i class="fa fa-twitter fa-lg"></i>
+           </a>
           </li>
         </ul>
       </section>

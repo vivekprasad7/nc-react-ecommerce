@@ -57,13 +57,14 @@ export const Login = () => {
                 value={loginInput.password}
                 onChange={(e)=> setLoginInput((prev) => ({...prev, password:e.target.value}))}
                 />
-                <button className="password-toggle" onClick={handlePasswordToggle}>{showPassword ? (<i class="fa fa-eye"></i>) :(<i class="fa fa-eye-slash"></i>)}</button>
+                {showPassword ? (<i onClick={handlePasswordToggle} class="fa fa-eye"></i>) :(<i  onClick={handlePasswordToggle} class="fa fa-eye-slash"></i>)}
+
             </div>
 
             <button className='green-btn green-bg' onClick={handleUserLogin}>Login</button>
             <button className='green-btn' onClick={handleTestLogin}>Login As Guest</button>
 
-            <p ><Link to="/signup" className='login-signup-link'> Don't have an Account? Sign Up</Link></p>
+            <p ><Link to="/signup" className='login-link'> Don't have an Account? Sign Up</Link></p>
 
         </div>
     

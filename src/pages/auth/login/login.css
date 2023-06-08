@@ -13,8 +13,6 @@
   
   .form h2 {
     align-self: center;
-    /* color: #1dbf73; */
-    
     margin-bottom: 0px;
   }
 
@@ -38,7 +36,10 @@
     padding: 1rem;
     transition: 0.2s all ease;
     margin: 10px 0;
+    position: relative;
   }
+
+  
 
  
   
@@ -70,8 +71,19 @@
     right:10px;
   }
 
+  .form-input i{
+    position: absolute;
+    color:#1dbf73;
+    top: 60px;
+    right:25px;
+  }
+
   .login-signup-link:hover{
     color: orange;
+  }
+
+  .login-link:hover{
+    color:#1dbf73;
   }
 
   

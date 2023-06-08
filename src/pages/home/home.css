@@ -1,21 +1,32 @@
 
+/* Banner Area */
 
 .home-container{
     margin-top: 3px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap-reverse;
-    padding: 50px 150px;
-    /* position: relative; */
-
+    padding: 100px;
 }
 
 .home-cta{
     font-size: larger;
-    margin-top: 180px;
-    margin-left: -100px;
-   
-   
+    margin-top: 100px;
+    margin-left: -50px;
+    letter-spacing: 4px;
+    padding: 1rem;
+}
+
+.cta-main{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    color: red;
+}
+
+.cta-rem{
+    font-size: 2rem;
 }
 
 .banner-img{
@@ -27,75 +38,26 @@
 }
 
 
-
 .home-btn{
     padding: 1rem;
     background-color: #fff;
-    /* background-color: #1dbf73; */
     font-family: Poppins;
+    font-weight: 700;
     margin-top: 40px;
     margin-left: 5px;   
-    border: solid 2px #1dbf73;
+    border: solid 2px red;
     border-radius: 10px;
-    color: #1dbf73;
+    color: black;
     cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-
-
-/* 
-.category-container{
-    padding:50px;
-    height:400px;
-    margin: 100px 0;
-    margin-bottom:200px ;
+.home-btn:hover{
+    background-color: red;
+    color: white;
 }
 
-.cat-heading{
-    text-align: center;
-    text-transform: upp ercase;
-    font-size: 26px;
-    letter-spacing:1.2px;
-}
-
-.home-categories{
-    display: flex;
-    justify-content: space-evenly;
-    padding:50px;
-}
-
-.cat-display{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #ededed;
-    padding: 50px;
-}
-
-.cat-unit{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-.cat-unit h4{
-margin-top: 20px;    
-}
-
-.cat-display:hover{
-    scale: 1.2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #ededed;
-    padding: 50px;
-} */
 
 /* Footer */
 
@@ -123,4 +85,26 @@ margin-top: 20px;
 
 .brand-footer{
     margin-bottom: 10px;
+}
+
+.footer h3{
+    font-size: 0.8rem;
+    letter-spacing: 1.7px;
+    margin-bottom: 10px;
+}
+
+.footer-animation{
+    width:5px;
+}
+
+
+@media (width < 768px){
+
+    .home-container{
+        padding: 50px;
+    }
+
+    .home-container img{
+        width:100%;
+    }
 }

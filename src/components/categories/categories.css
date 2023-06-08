@@ -8,7 +8,9 @@
 
 .cat-heading{
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    padding: 30px;
 }
 
 

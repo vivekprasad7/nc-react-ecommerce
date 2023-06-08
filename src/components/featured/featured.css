@@ -1,0 +1,79 @@
+.featured-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:3.5rem;
+    padding:4rem;
+}
+
+/* Featured Inner Cards */
+
+.featured-one{
+background: linear-gradient(141deg, rgba(45,155,187,1) 25%, rgba(131,214,231,1) 65%);   
+    padding:2rem;
+    border-radius: 20px;
+}
+
+.featured-two{
+    padding:2rem;
+    border-radius: 20px;
+    background: rgb(252, 161, 190);
+}
+ 
+.featured-three{
+ background-color: #FFD6AC;
+ padding:2rem;
+ border-radius: 20px;   
+}
+
+.featured-four{
+    /* background-color: #baf098; */
+    background: rgb(232,240,105);
+    background: radial-gradient(circle, rgba(232,240,105,0.8484126927138043) 0%, rgba(186,240,152,1) 100%); 
+    padding:2rem;
+    border-radius: 20px; 
+}
+
+
+.feat-img{
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Featured Card */
+
+
+
+.featured-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16rem;
+    min-width:280px;
+    margin: 10px;
+    background-color: #fff;
+    /* border: solid 1px black; */
+    border-radius: 10px;
+    box-shadow: 1px 2px 12px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 10px;
+}
+
+.featured-card:hover{
+    scale:1.1;
+}
+
+.featured-card h4{
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding:0.4rem;
+    margin-top: 0.2rem;
+}
+
+.brand-footer h3{
+    font-size:1rem;
+}

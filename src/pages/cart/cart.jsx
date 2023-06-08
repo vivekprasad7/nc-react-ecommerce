@@ -6,6 +6,8 @@ import { useCartContext } from '../../contexts/cartContext';
 import { CartTotal } from '../../components/cart-total/cartTotal';
 import { useWishlistContext } from '../../contexts/wishlistContext';
 import { isItemInWishlist } from '../../utils/isItemInWishlist';
+import emptycart from "../../assets/animations/emptycart.json"
+import Lottie from "lottie-react"
 
 export const Cart = () => {
 
@@ -27,9 +29,12 @@ export const Cart = () => {
       <section className='cart-items'>
         {
           cart?.length === 0 &&<div className='empty-cart-items'>
+            <div className='empty-cart-animation'>
+          <Lottie animationData={emptycart} />
+            </div>
         <h3>Your cart is empty!</h3>
         <p>Looks like your cart is sad. Make it happy by adding some delicacies.</p>
-        <button onClick={() => navigate('/products')}>Add Items</button>
+        <button className='impact-btn' onClick={() => navigate('/products')}>Add Items</button>
       </div>
         }
 

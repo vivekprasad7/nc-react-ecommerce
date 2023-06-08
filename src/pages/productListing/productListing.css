@@ -15,3 +15,8 @@
 }
 
 
+@media (width <768px){
+    .products-container{
+        width: 100%;
+    }
+}

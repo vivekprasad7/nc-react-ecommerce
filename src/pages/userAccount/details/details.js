@@ -17,7 +17,7 @@ export const Details = () => {
           <p></p>
           <p> <b>Email :</b> {user.email}</p>
       </div>
-      <button onClick={logoutHandler}>Logout</button>
+      <button className='impact-btn' onClick={logoutHandler}>Logout</button>
 
     </div>
   )

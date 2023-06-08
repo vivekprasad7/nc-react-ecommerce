@@ -56,8 +56,8 @@ export const ProductDetails = () => {
         {/* <p>Inclusive of all Taxes</p> */}
         
         <div className='buttons'>
-        <button onClick={() => addToCartHandler(singleProduct) }>Add to Cart</button>
-        <button onClick={() => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
+        <button className='impact-btn' onClick={() => addToCartHandler(singleProduct) }>Add to Cart</button>
+        <button className='impact-btn' onClick={() => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
         </div>
 
         {/* <ul>

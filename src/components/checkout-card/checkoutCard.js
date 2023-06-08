@@ -82,7 +82,7 @@ export const CheckoutCard = () => {
 
         </div>
         <div className='cart-checkout-btn'>
-            <button>Checkout</button>
+            <button className='impact-btn'>Checkout</button>
             <p className='total-savings'>You will save {totalDiscount} on this order</p>
         </div>
 

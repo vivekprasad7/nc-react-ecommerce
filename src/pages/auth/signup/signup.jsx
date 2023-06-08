@@ -67,7 +67,8 @@ export const Signup = () => {
                 value={signupInput.password}
                 onChange={(e)=> setSignupInput((prev)=> ({...prev, password: e.target.value}))}
                 />
-                <button className="password-toggle" onClick={handleShowPassword}>{showPassword ? (<i class="fa fa-eye"></i>) :(<i class="fa fa-eye-slash"></i>)}</button>
+               
+                {showPassword ? (<i onClick={handleShowPassword} class="fa fa-eye"></i>) :(<i  onClick={handleShowPassword} class="fa fa-eye-slash"></i>)}
             </div>
 
             <div className='form-input'>
@@ -76,13 +77,14 @@ export const Signup = () => {
                 value={signupInput.confirmPassword}
                 onChange={(e)=> setSignupInput((prev)=> ({...prev, confirmPassword: e.target.value}))}
                 />
-                <button className="password-toggle" onClick={handleShowConfirmPassword}>{showPassword ? (<i class="fa fa-eye"></i>) :(<i class="fa fa-eye-slash"></i>)}</button>
+               
+                {showPassword ? (<i onClick={handleShowConfirmPassword} class="fa fa-eye"></i>) :(<i  onClick={handleShowConfirmPassword} class="fa fa-eye-slash"></i>)}
 
             </div>
 
             <button  onClick={handleUserSignup} className='green-btn green-bg'>Create New Account</button>
 
-            <p>Already have an account? <Link to="/login">Log In</Link></p>
+            <p><Link to="/login" className='login-link'> Already have an account? Log In</Link></p>
 
         </div>
     

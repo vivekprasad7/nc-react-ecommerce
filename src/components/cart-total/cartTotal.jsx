@@ -31,7 +31,7 @@ export const CartTotal = () => {
         </div>
         <hr></hr>
         <div className='cart-checkout-btn'>
-            <button onClick={() => navigate("/checkout")}>Checkout</button>
+            <button className='impact-btn' onClick={() => navigate("/checkout")}>Checkout</button>
             <p className='total-savings'>You will save {totalDiscount} on this order</p>
         </div>
 

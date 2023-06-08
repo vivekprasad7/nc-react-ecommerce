@@ -21,13 +21,14 @@ export const Addresses = () => {
       <div style={{ filter: isAddressFormVisible ? "blur(10px)" : "" }}>
         <div>
           {
-            addressList?.map((el) => <li  key={el._id} style={{border:"solid 1px black", padding:"1rem", margin:"1rem"}}>
+            addressList?.map((el) => <li  key={el._id} style={{border:"solid 1px gray", borderRadius:"10px",padding:"1rem", margin:"1rem"}}>
               <p><b>Name: {el.name}</b></p>
               <p><b>Address:</b> {el.street}, {el.city}</p>
               <p>{el.state}, {el.country}</p>
               <p>Pincode: {el.zipcode}</p>
               <div>
             <button
+            className='impact-btn'
             onClick={() => {
               setIsAddressFormVisible(true)
               setCheckout(el)
@@ -35,6 +36,7 @@ export const Addresses = () => {
             }}
             >Edit</button>
             <button
+            className='impact-btn'
             onClick={()=>{
               removeAddressData(el._id)
               setCheckout({
@@ -55,7 +57,7 @@ export const Addresses = () => {
           
         </div>
         <button 
-          className='add-address'
+        className='impact-btn'
           style={{cursor:"pointer"}}
           onClick={() => {
           setIsAddressFormVisible(true) 

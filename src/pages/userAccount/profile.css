@@ -7,10 +7,10 @@
 }
 
 .user-profile-box{
-    max-width: 50%;
+    width: 50%;
     /* height:70vh; */
     height: max-content;
-    margin: 1rem auto;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 1px 2px 12px 4px rgba(0,0,0,0.2);
 }
@@ -30,6 +30,11 @@
 
 @media (width < 768px){
     .user-profile-box{
-      width:90%;
+      width:100%;
+      /* margin:10px; */
+    }
+
+    .user-account-data{
+        width:100%;
     }
   }
