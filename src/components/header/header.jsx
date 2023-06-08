@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import { useFilterContext } from "../../contexts/filterContext";
 import { useWishlistContext } from "../../contexts/wishlistContext";
@@ -9,11 +9,11 @@ export const Header = () => {
   const {filterDispatch} = useFilterContext();
   const {wishlist} = useWishlistContext();
   const {cart} = useCartContext();
+  const navigate = useNavigate();
 
   return (
     <>
       <header className="header">
-        <div className="container c_flex">
           <div className="brand-bar">
             <h3><Link to="/"><span className="logo">cake</span>factory</Link></h3>
           </div>
@@ -22,7 +22,9 @@ export const Header = () => {
             <input
               type="search"
               placeholder="Search Cakes, Muffins, Desserts..."
-              onChange={(e) => filterDispatch({type:"FILTER_BY_SEARCH", payload:e.target.value})}
+              onChange={(e) => {                
+              navigate("/products");
+              filterDispatch({type:"FILTER_BY_SEARCH", payload:e.target.value})}}
             />
           </div>
           <nav className="nav-icons c_flex">
@@ -48,7 +50,6 @@ export const Header = () => {
               </Link>
             </div>
           </nav>
-        </div>
       </header>
     </>
   );

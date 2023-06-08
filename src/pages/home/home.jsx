@@ -19,7 +19,7 @@ export const Home = () => {
       </div>
       </section>
       <section className='banner-img'>
-        <img src={banner} />
+        <img onClick={() => navigate("/products")} src={banner} />
       </section>
       
     </main>
@@ -65,6 +65,12 @@ export const Home = () => {
 
     <div className='footer-bar'>
       <p>Made with Love by Vivek</p>
+    </div>
+
+    <div className='mobile-menu'>
+    <div>
+      
+    </div>
     </div>
 
 

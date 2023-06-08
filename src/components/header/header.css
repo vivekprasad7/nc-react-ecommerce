@@ -1,11 +1,21 @@
 .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:1rem;
+    padding:1.3rem;
+    width:100%;
+    box-shadow: 1px 2px 3px 0px rgba(120,120,120,0.4);
+}
+
+/* .header{
     height: 4.4rem;
     background-color: white;
     align-items: center;
     padding: 20px 0;
     margin:auto;
     box-shadow: 1px 2px 3px 0px rgba(120,120,120,0.4);
-}
+} */
 
 .container{
     
@@ -15,7 +25,7 @@
 
 .brand-bar{
     width: 20%;
-    height: 30px;
+    font-size: 1.2rem;
 }
 
 .logo{
@@ -29,7 +39,6 @@
     border:2px solid rgba(0,0,0,0.2);
     border-radius: 50px;
     align-items: center;
-
 }
 
 .search-bar i{
@@ -48,6 +57,8 @@
 
 ::placeholder{
     font-size: 15px;
+    font-family: Poppins;
+    letter-spacing: 1px;
   }
 
 
@@ -98,7 +109,12 @@
 
 
 @media (width < 768px){
+    .header{
+        justify-content: space-between;
+        padding:1.2rem 1rem;
+    }
     .search-bar{
         display: none;
     }
+
 }

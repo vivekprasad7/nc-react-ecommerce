@@ -23,3 +23,13 @@
     margin:10px;
     width:40%;
 }
+
+@media ( width < 768px){
+    .checkout-address{
+        width:100%;
+    }
+
+    .checkout-details{
+        width:100%;
+    }
+}

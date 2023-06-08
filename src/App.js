@@ -17,11 +17,18 @@ import { RequiresAuth } from "./components/auth/requiresAuth";
 import { AddressForm } from "./components/address-form/addressForm";
 import { Checkout } from "./pages/checkout/checkout";
 import { Toaster } from "react-hot-toast";
+import { MobileMenu } from "./components/mobile-menu/mobileMenu";
+import { MobileSearch } from "./components/mobile-search/mobileSearch";
+import { useAuthContext } from "./contexts/authContext";
+import { MobileFilter } from "./components/mobile-filters/mobileFilter";
 
 
 function App() {
+  const {showMobileSearch, showMobileFilter} = useAuthContext()
   return (
     <div className="App">
+      { showMobileSearch && <MobileSearch/> }
+      { showMobileFilter && <MobileFilter/>}
       <nav style={{textAlign:"center", backgroundColor:"orange", color:"white", display:"none"}}>
         <NavLink to="/">Home</NavLink>  {" "} || {" "}
         <NavLink to="/mockman">Mockman</NavLink> {" "} || {" "}
@@ -73,6 +80,8 @@ function App() {
           top: "5rem",
         }}
       />
+      <MobileMenu/>
+
       
     </div>
   );

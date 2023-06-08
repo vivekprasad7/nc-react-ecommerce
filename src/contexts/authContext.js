@@ -25,6 +25,9 @@ export const AuthContextProvider = ({children}) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [showMobileSearch, setShowMobileSearch] = useState(false)
+    const [showMobileFilter, setShowMobileFilter] = useState(false);
+
 
     const loginHandler = async (loginInput) => {
         try{
@@ -91,7 +94,7 @@ export const AuthContextProvider = ({children}) => {
 
     return(
         <>
-        <AuthContext.Provider value={{ authState, loginHandler, signupHandler, logoutHandler, loginInput, setLoginInput, signupInput, setSignupInput}}>
+        <AuthContext.Provider value={{ authState, loginHandler, signupHandler, logoutHandler, loginInput, setLoginInput, signupInput, setSignupInput, showMobileSearch, setShowMobileSearch, showMobileFilter, setShowMobileFilter}}>
             {children}
         </AuthContext.Provider>
         </>

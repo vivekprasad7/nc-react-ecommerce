@@ -1,0 +1,35 @@
+.mobile-search{
+    width: 100%;
+    background-color: #f3f5f9;
+    padding:1rem;
+    position:sticky;
+    top: 0px;
+    left:0px;
+    right:0px;
+    display: none;
+}
+
+.mobile-search-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0.8;
+
+}
+
+.mobile-search-menu input{
+    padding:0.5rem;
+    width:100%;
+    border-radius: 10px;
+    border: solid 1px gray;
+}
+
+
+@media (width < 768px){
+    .mobile-search{
+        display: block;
+        z-index: 999;
+
+    }
+}
