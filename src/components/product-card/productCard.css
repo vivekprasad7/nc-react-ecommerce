@@ -65,7 +65,7 @@
   top: 6%;
   right: 6%;
   color: gray;
-  opacity: 0.7;
+  opacity: 0.5;
   border-radius: 50%;
 }
 
@@ -83,6 +83,7 @@
   height: 40px;
   line-height: 40px;
   background: #f3f5f9;
+  background: rgba(243, 245, 249, 0.1); 
   margin-left: 15px;
   text-align: center;
   border-radius: 50%;
@@ -99,43 +100,7 @@
   
 }
 
-/* Card Buttons */
 
-/* .card-btn {
-  padding: 0.5rem;
-  background-color: #fff;
-  margin: 10px;
-  border: solid 1px #1dbf73;
-  border-radius: 10px;
-  color: #1dbf73;
-  cursor: pointer;
-  margin-top: 13px;
-}
-
-.added-card-btn{
-  padding: 0.5rem;
-  background-color: #1dbf73;
-  margin: 10px;
-  border: solid 1px #1dbf73;
-  border-radius: 10px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.added-card-btn a{
-  color: #fff;
-}
-.added-card-btn:hover{
-  background-color: #2bb977;
-}
-
-.card-btn:hover {
-  background-color: #1dbf73;
-  color: #fff;
-} */
-
-/* End */
 
 
 .rupee-price{
