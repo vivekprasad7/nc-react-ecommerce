@@ -14,7 +14,7 @@ export const Home = () => {
       <section className='banner-text'>
       <div className='home-cta'>
         <h2 className='cta-main'>Indulge</h2>
-        <h2 className='cta-rem'>Without Regret!!</h2>
+        <h2 className='cta-rem'>Without Regret! </h2>
         <button onClick={() => navigate("/products")}className='home-btn'>ORDER NOW</button>
       </div>
       </section>
