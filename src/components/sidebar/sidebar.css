@@ -12,6 +12,7 @@
     margin-top: 30px;
     font-size: 15px;
     opacity: 0.9;
+    transition: all 0.2s ease-in-out;
 }
 
 .sidebar:hover{
@@ -35,6 +36,7 @@
     width:80px;
     font-family: Poppins;
     letter-spacing: 1.4px;
+    transition: all 0.3s ease-in-out;
 }
 
 .sidebar-btn:hover{

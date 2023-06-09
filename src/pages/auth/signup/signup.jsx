@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import "./login.css"
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../../../contexts/authContext'
+import { toast } from 'react-hot-toast'
 
 export const Signup = () => {
 
@@ -24,7 +25,8 @@ export const Signup = () => {
         alert("Passwords Don't Match")
     } else {
         signupHandler(signupInput)
-        alert("Log in ho gaya bey")
+        toast.success("You have logged in!")
+        navigate('/');
     }
     }
  

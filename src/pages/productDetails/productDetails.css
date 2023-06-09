@@ -105,6 +105,7 @@ button {
     cursor: pointer;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
 .impact-btn:hover{

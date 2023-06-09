@@ -51,6 +51,8 @@
     cursor: pointer;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 0.2s ease-in;
+
 }
 
 .home-btn:hover{

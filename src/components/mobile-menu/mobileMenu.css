@@ -2,14 +2,19 @@
     width: 100%;
     height:4rem;
     background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     position:sticky;
     bottom: 0px;
     left:0px;
     right:0px;
     display: none;
-    opacity: 0.8;
-
 }
+
+.mobile-menu .mobile-icon{
+    opacity: none;
+}
+
+
 
 .inner-mobile-menu{
     display: flex;
@@ -22,12 +27,12 @@
 .mobile-icon {
     width:20%;
     height: 4rem;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .mobile-icon{

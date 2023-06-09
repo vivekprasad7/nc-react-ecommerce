@@ -1,6 +1,7 @@
 .mobile-search{
     width: 100%;
     background-color: #f3f5f9;
+    background-color: rgb(255, 138, 138);
     padding:1rem;
     position:sticky;
     top: 0px;
@@ -22,7 +23,8 @@
     padding:0.5rem;
     width:100%;
     border-radius: 10px;
-    border: solid 1px gray;
+    /* border: solid 1px gray; */
+    background-color: #fff;
 }
 
 

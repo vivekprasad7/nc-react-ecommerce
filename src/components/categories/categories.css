@@ -33,6 +33,7 @@
     border-radius:10px;
     object-fit: contain;
     width: 250px;
+    transition: all 0.3s ease-in-out;
 }
 
 .cat-unit h4{

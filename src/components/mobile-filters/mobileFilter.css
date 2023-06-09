@@ -11,11 +11,11 @@
 }
 
 .mobile-sidebar{
-    background-color: aqua;
     /* z-index: 999; */
     position: sticky;
     top:30px;
     background-color: #f3f5f9;
+    background-color: rgba(255, 0, 0, 0.1);
     padding:20px;
     display: flex;
     flex-direction: column;

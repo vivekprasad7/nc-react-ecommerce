@@ -72,15 +72,16 @@ export const AuthContextProvider = ({children}) => {
                 authDispatch({type: "SET_USER", payload:data?.createdUser})
                 authDispatch({type: "SET_TOKEN", payload:data?.encodedToken})
                 authDispatch({type: "SET_AUTH_LOADING", payload:false})
-                navigate(location?.state?.from?.pathname || "/")
+                navigate(location?.state?.from?.pathname || "/products")
                 localStorage.setItem("token", data?.encodedToken)
                 localStorage.setItem("new_user", data?.createdUser?.email)
                 console.log(data)
-                toast.success("New User Created")
+                toast.success("New User Created, Login Successful!")
 
             }
         } catch(e){
             console.error(e);
+            console.log("signup", e)
            
         }
     }
