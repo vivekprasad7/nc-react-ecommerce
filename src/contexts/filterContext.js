@@ -11,15 +11,6 @@ export const FilterContextProvider = ({children}) =>{
 
     const {productData} = useProductsContext();
 
-   
-
-    // const initialFilterData = {
-    //     searchInput:"",
-    //     priceRange:"",
-    //     categories:[],
-    //     sortByRating:"",
-    //     sortByPrice:"",  
-    // }
 
     const [ filterState, filterDispatch] = useReducer(filterReducer, initialFilterData);
 

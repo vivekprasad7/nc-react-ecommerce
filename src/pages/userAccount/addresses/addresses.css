@@ -8,3 +8,10 @@
     z-index: 999;
     background-color: rgba(0,0,0,0.5);
 }
+
+.address-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}

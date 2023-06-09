@@ -17,7 +17,6 @@ export const MobileFilter = () => {
   const stars = [1, 2, 3, 4];
   return (
     <div className="mobile-filter">
-      {/* <h2> Mobile Filter</h2> */}
       <div className="mobile-sidebar">
         <div className="sidebar-title">
           <h3 className="sidebar-heading">FILTERS</h3>

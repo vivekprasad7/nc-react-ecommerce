@@ -4,19 +4,12 @@ import { ProductCard } from '../../components/product-card/productCard';
 import "./productListing.css"
 import { Sidebar } from '../../components/sidebar/sidebar';
 import { useFilterContext } from '../../contexts/filterContext';
-// import { getFilteredProducts } from '../../utils/getFilteredProducts';
+import { NoProductsFound } from '../../components/no-products-found/noProductsFound';
 
 export const ProductListing = () => {
-  const {productData, productLoading} = useProductsContext();
-  const {filterState  , getFilteredProducts, newData} = useFilterContext();
+  const { productLoading} = useProductsContext();
+  const { newData} = useFilterContext();
 
-  // console.log("pp",getFilteredProducts)
-
-  // const newData = getFilteredProducts(productData, filterState);
-
-  // const filteredProducts = getFilteredProducts(productData, filterState)
-
-  
 
 if (productLoading) {return<><p>Loading...</p></>} else
   return (
@@ -24,6 +17,24 @@ if (productLoading) {return<><p>Loading...</p></>} else
     <div className='product-listing-page'>
     <Sidebar/>
     <div className='products-container'>
+      {
+        newData.length > 0 ? (
+          <>
+            {
+               newData?.map((item) => {
+
+                return(
+                <ProductCard item={item} key={item._id}/>
+                )
+              })
+            }
+          </>
+        ) : (
+          <NoProductsFound/>
+        )
+      }
+
+
       {
         newData?.map((item) => {
 

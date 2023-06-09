@@ -21,68 +21,65 @@ import { MobileMenu } from "./components/mobile-menu/mobileMenu";
 import { MobileSearch } from "./components/mobile-search/mobileSearch";
 import { useAuthContext } from "./contexts/authContext";
 import { MobileFilter } from "./components/mobile-filters/mobileFilter";
+import { NotFound } from "./pages/notFound/notFound";
+import { OrderSummary } from "./pages/orderSummary/orderSummary";
 
 
 function App() {
-  const {showMobileSearch, showMobileFilter} = useAuthContext()
+  const { showMobileSearch, showMobileFilter } = useAuthContext()
   return (
     <div className="App">
-      { showMobileSearch && <MobileSearch/> }
-      { showMobileFilter && <MobileFilter/>}
-      <nav style={{textAlign:"center", backgroundColor:"orange", color:"white", display:"none"}}>
+      {showMobileSearch && <MobileSearch />}
+      {showMobileFilter && <MobileFilter />}
+      <nav style={{ textAlign: "center", backgroundColor: "orange", color: "white", display: "none" }}>
         <NavLink to="/">Home</NavLink>  {" "} || {" "}
         <NavLink to="/mockman">Mockman</NavLink> {" "} || {" "}
         <NavLink to="/products">Products</NavLink>  {" "} || {" "}
         <NavLink to="/cart">Cart</NavLink>  {" "} || {" "}
         <NavLink to="/wishlist">Wishlist</NavLink>  {" "} || {" "}
-        <NavLink to="/">Home</NavLink>  {" "} || {" "}   
-        <NavLink to="/login">Login</NavLink>  {" "} || {" "}  
-        <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "} 
-        <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}  
-        <NavLink to="/addressform">Address Form</NavLink>  {" "} || {" "}  
-        <NavLink to="/checkout">Checkout</NavLink>  {" "} || {" "}  
-
-
-        
-  
+        <NavLink to="/">Home</NavLink>  {" "} || {" "}
+        <NavLink to="/login">Login</NavLink>  {" "} || {" "}
+        <NavLink to="/signup">Sign Up</NavLink>  {" "} || {" "}
+        <NavLink to="/profile">Profile</NavLink>  {" "} || {" "}
+        <NavLink to="/addressform">Address Form</NavLink>  {" "} || {" "}
+        <NavLink to="/checkout">Checkout</NavLink>  {" "} || {" "}
       </nav>
 
-      <Header/>
+      <Header />
       <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/products" element={<ProductListing/>}/>
-      <Route path="/products/:productID" element={<ProductDetails/>}/>
-      <Route path="/mockman" element={<Mockman/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/signup" element={<Signup/>}/>
-      <Route path="/addressform" element={<AddressForm/>}/>
-      <Route path="/checkout" element={<Checkout/>}/>
+        
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductListing />} />
+        <Route path="/products/:productID" element={<ProductDetails />} />
+        <Route path="/mockman" element={<Mockman />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/addressform" element={<AddressForm />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/summary" element={<OrderSummary />} />
 
+        <Route path="/*" element={<NotFound />} />
 
+        <Route path="/cart" element={<RequiresAuth><Cart /></RequiresAuth>} />
+        <Route path="/wishlist" element={<RequiresAuth><Wishlist /></RequiresAuth>} />
 
-      <Route path="/cart" element={<RequiresAuth><Cart/></RequiresAuth>}/>
-      <Route path="/wishlist" element={<RequiresAuth><Wishlist/></RequiresAuth>}/>
-
-
-
-      <Route path="/profile" element={<RequiresAuth><Profile/></RequiresAuth>}>
-        <Route path='' element={<Details/>}/>
-        <Route path='addresses' element={<Addresses/>}/>
-        <Route path='orders' element={<Orders/>}/>
-      </Route>
-
+        <Route path="/profile" element={<RequiresAuth><Profile /></RequiresAuth>}>
+          <Route path='' element={<Details />} />
+          <Route path='addresses' element={<Addresses />} />
+          <Route path='orders' element={<Orders />} />
+        </Route>
 
       </Routes>
-     <Toaster
+      <Toaster
         position="top-right"
         reverseOrder={false}
         containerStyle={{
           top: "5rem",
         }}
       />
-      <MobileMenu/>
+      <MobileMenu />
 
-      
+
     </div>
   );
 }

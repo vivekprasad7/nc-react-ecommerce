@@ -1,6 +1,6 @@
 import React from 'react'
 import "./featured.css"
-import { cake1, cake4, image1, pastry1, pastry2 } from '../../assets'
+import { cake1, cake4, pastry1, pastry2 } from '../../assets'
 import { useNavigate } from 'react-router-dom'
 
 export const Featured = () => {

@@ -5,33 +5,13 @@ import "./addressForm.css"
 
 export const AddressForm = () => {
     const {
-        addAddressData, 
-        removeAddressData, 
-        editAddress,
-        addressList,
         checkout,
         setCheckout,
         isAddressFormVisible,
         setIsAddressFormVisible,
         isEdit,
-        setIsEdit,
         handleAddressForm,
     } = useAddressContext();
-
-    const checkoutInitial = {
-        _id:"",
-        name:"",
-        street:"",
-        city:"",
-        zipcode:"",
-        state:"",
-        country:"",
-        mobile:""
-    }
-
-
-  
-
 
   return (
     <div className='form-address'
@@ -95,7 +75,7 @@ export const AddressForm = () => {
                 required
                 />
         </div>
-        <button onClick={handleAddressForm}>{ isEdit ? "Save Address" : "Add Address"}</button>
+        <button className='impact-btn' onClick={handleAddressForm}>{ isEdit ? "Save Address" : "Add Address"}</button>
     </div>
   )
 }

@@ -1,0 +1,13 @@
+.no-products-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding: 80px;
+}
+
+.no-products-animation{
+    width: 500px;
+    margin: auto;
+}

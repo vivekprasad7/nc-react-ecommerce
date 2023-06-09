@@ -14,6 +14,7 @@
     width:80px;
     font-family: Poppins;
     width: fit-content;
+    letter-spacing: 1px;
 }
 
 .select-address-btn:hover{

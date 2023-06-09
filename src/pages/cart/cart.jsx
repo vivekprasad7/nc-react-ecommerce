@@ -14,7 +14,7 @@ export const Cart = () => {
   const navigate = useNavigate();
   const{ authState:{token}} = useAuthContext();
 
-  const {cart, addToCartHandler , updateCartHandler, removeCartHandler} = useCartContext();
+  const {cart, updateCartHandler, removeCartHandler} = useCartContext();
   const{wishlist, addToWishlistHandler} = useWishlistContext();
 
 

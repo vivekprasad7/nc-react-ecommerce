@@ -1,0 +1,24 @@
+.order-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f6f9fc;
+    padding:70px;
+    width:50%;
+    height: 70vh;
+    margin: 5rem auto;
+    border-radius: 20px;
+
+}
+
+.order-summary-animation{
+    width:200px;
+}
+
+@media (width < 768px){
+    .order-summary{
+        width: 90%;
+    }
+}

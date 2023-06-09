@@ -10,7 +10,6 @@ export const MobileSearch = () => {
     <>
     <div className='mobile-search'>
     <div className='mobile-search-menu'>
-            {/* <i className="fa fa-search"></i> */}
             <input
               type="search"
               placeholder="Search Cakes, Muffins, Desserts..."
@@ -18,7 +17,6 @@ export const MobileSearch = () => {
                 navigate("/products");
               filterDispatch({type:"FILTER_BY_SEARCH", payload:e.target.value})
             }}
-
             />
         </div>  
     </div>

@@ -91,17 +91,17 @@ export const CartContextProvider = ({children}) => {
     }
 
     const updateCartHandler = (item, updateType) => {
-       
-            if (item.qty < 1){
-                removeFromCart(item._id, token)
-                toast.success("Removed From Cart")
-            } else{
-                (updateType === "inc") ?  updateCartQty(item._id, "increment", token) : updateCartQty(item._id, "decrement", token)
-                toast.success("Updated Quantity in Cart")
-
-            }   
-        
-    }
+        if (updateType === "inc") {
+            updateCartQty(item._id, "increment", token);
+        } else if (updateType === "dec" && item.qty > 1) {
+            updateCartQty(item._id, "decrement", token);
+        } else {
+            removeFromCart(item._id, token);
+            toast.success("Removed From Cart");
+        }
+    
+        toast.success("Updated Quantity in Cart");
+    };
 
     const {totalPrice, totalDiscount, totalDelivery} = cart?.reduce((acc,curr) =>{
         acc.totalPrice = (+curr.price * curr.qty) + +acc.totalPrice;
@@ -119,7 +119,7 @@ export const CartContextProvider = ({children}) => {
 
 
 
-    return(<CartContext.Provider value={{cart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery, removeCartHandler}}>{children}</CartContext.Provider>)
+    return(<CartContext.Provider value={{cart, setCart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery, removeCartHandler, cartLoading}}>{children}</CartContext.Provider>)
 }
 
 export const useCartContext = () => useContext(CartContext);

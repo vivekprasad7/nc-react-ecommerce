@@ -26,7 +26,7 @@ export const Addresses = () => {
               <p><b>Address:</b> {el.street}, {el.city}</p>
               <p>{el.state}, {el.country}</p>
               <p>Pincode: {el.zipcode}</p>
-              <div>
+              <div className='address-buttons'>
             <button
             className='impact-btn'
             onClick={() => {

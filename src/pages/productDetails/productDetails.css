@@ -4,13 +4,12 @@
     margin: 10px auto;
     justify-content: center;
 }
+
+
 /* Main Container */
 .detail-container{
     padding:30px;
 }
-
-
-
 
 
 .single-product-container{
@@ -32,6 +31,7 @@
 
 
 /* Image Container */
+
 .img-container{
     width:400px;
 }
@@ -46,19 +46,43 @@
     width: 60%;
 }
 
+.details .card-price{
+    font-size: 1rem;
+    margin-left: 1px;
+}
+
+.details .product-details-ratings{
+    font-size:0.9rem;
+    color: rgb(41, 41, 41);
+}
+
+.details .card-price .rupee-strike{
+    color:#808080;
+}
+
+.details .product-details-ratings i{
+    color:rgb(235, 201, 13) ;
+}
+
 .details p {
     font-size: 0.8rem;
+    color:#808080;
 }
 
 .desc{
     font-size: 0.8rem;
 }
 
+.buttons{
+    display: flex;
+    gap:1rem;
+}
+
 button {
     padding: 0.5rem;
     background-color: #fff;
     /* background-color: #1dbf73; */
-    margin: 10px;
+    margin: 7px 0px;
     border: solid 1px #1dbf73;
     border-radius: 10px;
     color: #1dbf73;

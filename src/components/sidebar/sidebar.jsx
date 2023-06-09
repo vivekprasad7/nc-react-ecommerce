@@ -16,14 +16,14 @@ export const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-title">
-      <h3 className="sidebar-heading">FILTERS</h3>
+        <h3 className="sidebar-heading">FILTERS</h3>
 
-      <span>
-        <button className='sidebar-btn' onClick={handleClearAll}>Reset</button>
-      </span>
-
+        <span>
+          <button className="sidebar-btn" onClick={handleClearAll}>
+            Reset
+          </button>
+        </span>
       </div>
-      
 
       <div className="price-filter">
         <h4>Price</h4>
@@ -118,8 +118,8 @@ export const Sidebar = () => {
             />{" "}
             Price: Low to High
           </label>
-          <label> 
-          <input
+          <label>
+            <input
               name="sort"
               type="radio"
               checked={filterState.sortByPrice === "HTL"}
@@ -127,7 +127,7 @@ export const Sidebar = () => {
               onChange={() =>
                 filterDispatch({ type: "SORT_BY_PRICE", payload: "HTL" })
               }
-            />{" "}{" "}
+            />{" "}
             Price: High to Low
           </label>
         </div>
