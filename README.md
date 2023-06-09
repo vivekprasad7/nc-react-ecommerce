@@ -1,27 +1,38 @@
 <div align="center">
-  <h1>Cake Factory</h1>
- </div>
+
+# Cake Factory
+</div>
 
 
-## Screens in this project
-- Landing Page
-- Product Listing Page
-- Authentication (Login, Signup and Logout) Pages
-- Single Product Page
-- Cart Management Page
-- Checkout Page
-- Wishlist Management Page
-- Profile Page
-- Address Management Page
-- Order History Page
-- 404 (Not Found) Page
+## **Features -**
 
+- Home page
+- Product listing page
+- Pagination on product listing page
+- Filter and sort products functionalities
+- Search product functionality
+- Individual product page
+- Cart Managment
+- Wishlist managment
+- Order management
+- Address management
+- Coupon Codes
+- Checkout page
+- Payment gateway integration
+- Authentication:
+  - User Signup
+  - User Login
+  - logout page
+ - Fully Responsive
+ - Error Page
 
-## Tech Stack and Tools
+## **Built with -**
+
 - React JS
-- React Router v6
 - React Context API + useReducer
-- Vanilla CSS 
-- Git For Version Control
-- Netlify for Deployment
-- Cloudinary for Image Hosting
+- React Router v6
+- Razorpay payment gateway
+
+## **Demo -**
+https://github.com/vivekprasad7/nc-react-ecommerce/assets/26505800/fded70c0-1779-4071-b4c1-e97d03eeaf53
+
