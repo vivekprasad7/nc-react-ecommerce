@@ -22,3 +22,13 @@
     color: #fff;
 }
 
+
+@media (width < 768px){
+    .checkout-address-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:10px 1px;
+    }
+}

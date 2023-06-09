@@ -19,7 +19,7 @@ export const Home = () => {
       </div>
       </section>
       <section className='banner-img'>
-        <img onClick={() => navigate("/products")} src={banner} />
+        <img onClick={() => navigate("/products")} src={banner} alt='banner' />
       </section>
       
     </main>

@@ -51,8 +51,8 @@ export const Cart = () => {
 
                   <div className='cart-details'>
                   <h4>{item.title}</h4>
-                  <h4>${item.price}.00 * {item.qty} 
-                  <span></span></h4>
+                  <h5 className='cart-price-qty'>₹ {item.price}.00 * {item.qty} 
+                  <span></span></h5>
 
                 </div>
 

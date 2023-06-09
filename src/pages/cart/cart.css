@@ -25,6 +25,12 @@
     border-radius: 20px;
 }
 
+.cart-price-qty{
+    color:rgb(218, 171, 83);
+    font-size: 0.7rem;
+    margin: 10px 0px;
+}
+
 .empty-cart-items{
     display: flex;
     flex-direction: column;
@@ -124,6 +130,10 @@
 
     .cart-details h4{
         font-size:1rem;
+        text-align: center;
+    }
+    .cart-price-qty{
+        font-size: 0.9rem;
         text-align: center;
     }
     .empty-cart-items button{

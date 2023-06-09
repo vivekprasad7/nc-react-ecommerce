@@ -21,6 +21,7 @@ export const SelectAddress = () => {
 
         {addressList.map((el) => {
           return (
+
             <div key={el._id} className="checkout-address-list">
               <input
                 type="radio"
