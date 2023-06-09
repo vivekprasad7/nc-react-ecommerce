@@ -1,6 +1,7 @@
 <div align="center">
 
 # Cake Factory
+An Ecommerce App to Order Cakes and Muffins Online!
 </div>
 
 
