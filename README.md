@@ -25,3 +25,6 @@
 - Git For Version Control
 - Netlify for Deployment
 - Cloudinary for Image Hosting
+
+![Video](cf-github.mp4)
+
