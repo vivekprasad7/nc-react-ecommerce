@@ -44,7 +44,7 @@ export const AddressContextProvider = ({children}) => {
 
             if ( status === 201){
                 setAddressList(data?.address)
-                console.log("addAddressData",data)
+                //console.log("addAddressData",data)
             }
         } catch(e){
             console.error("addAddressData_Error",e)
@@ -68,11 +68,11 @@ export const AddressContextProvider = ({children}) => {
 
             if(status ===201){
                 setAddressList(data?.address)
-                console.log("edit", data )
+                //console.log("edit", data )
             }
         } catch(e){
             console.error(e)
-            console.log("edit", e)
+            //console.log("edit", e)
         }
     }
 
@@ -111,7 +111,6 @@ export const AddressContextProvider = ({children}) => {
             } else{
                 toast.error("Fill all input fields")
 
-                alert("Fill all input fields")
             }
             setIsAddressFormVisible(false);
             setIsEdit(false);

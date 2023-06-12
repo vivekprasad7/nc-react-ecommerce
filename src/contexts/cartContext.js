@@ -14,6 +14,7 @@ export const CartContextProvider = ({children}) => {
 
     const [ cart, setCart] = useState([]);
     const [cartLoading, setCartLoading] = useState(false);
+    const [disableBtn, setDisableBtn] = useState(false)
 
 
     const getCartData = async () => {
@@ -37,12 +38,12 @@ export const CartContextProvider = ({children}) => {
 
             if(status === 201){
                 setCart(data?.cart)
-                console.log("add_to_cart", data)
+                //console.log("add_to_cart", data)
 
             }
         } catch(e){
             console.error(e)
-            console.log("error_add_to_cart", e)
+            //console.log("error_add_to_cart", e)
 
         }
     }
@@ -53,12 +54,12 @@ export const CartContextProvider = ({children}) => {
 
            if( status === 200){
             setCart(data?.cart)
-            console.log("remove_from_cart", cart)
+            //console.log("remove_from_cart", cart)
             
            }
         } catch(e){
             console.error(e)
-            console.error("error_remove_from_cart", e)
+            //console.error("error_remove_from_cart", e)
         }
     }
 
@@ -68,7 +69,7 @@ export const CartContextProvider = ({children}) => {
 
             if(status === 200){
                 setCart(data?.cart)
-                console.log(cart);
+                //console.log(cart);
             }
         } catch(e){
             console.error(e)
@@ -84,6 +85,10 @@ export const CartContextProvider = ({children}) => {
     const addToCartHandler = (item) => {
         if(token){
             isItemInCart(item._id, cart) ? navigate("/cart") : addToCart(item)
+            setDisableBtn(true);
+            setTimeout(()=>{
+                setDisableBtn(false)
+            },600)
             toast.success("Added to Cart")
         } else{
             navigate("/login")
@@ -119,7 +124,7 @@ export const CartContextProvider = ({children}) => {
 
 
 
-    return(<CartContext.Provider value={{cart, setCart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery, removeCartHandler, cartLoading}}>{children}</CartContext.Provider>)
+    return(<CartContext.Provider value={{cart, setCart, addToCartHandler, updateCartHandler, totalPrice, totalDiscount, totalDelivery, removeCartHandler, cartLoading, disableBtn}}>{children}</CartContext.Provider>)
 }
 
 export const useCartContext = () => useContext(CartContext);

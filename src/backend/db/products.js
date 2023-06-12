@@ -12,7 +12,6 @@ export const products = [
     _id: "ad9bb515-3d1c-483f-8446-40d10cce759d",
     title: "Mango Tropical Cake",
     image:cake1,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango1_fwaa0l.webp",
     ratings: {
       rate:"4.5",
       count:"985"
@@ -31,7 +30,6 @@ export const products = [
     _id: "b51abe1b-e546-4a5f-b17a-94aa0aa75652",
     title: "Butterscotch Cake",
     image:cake2,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/butter1_zjd04q.jpg",
     ratings: {
       rate:"4.1",
       count:"622"
@@ -50,7 +48,6 @@ export const products = [
     _id: "181e8e28-afb6-4a53-ab2d-f9f7348b44a9",
     title: "Dutch Chocolate Cake",
     image:cake3,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/rasmalai-cake_gfbhfb.jpg",
     ratings: {
       rate:"3.9",
       count:"234"
@@ -69,7 +66,6 @@ export const products = [
     _id: "b2ddef51-d28f-4e9c-8d30-e3c119d7272f",
     title: "Chocolate Truffle Cake",
     image:cake4,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/chocolate-truffle-cake_gaygcj.jpg",
     ratings: {
       rate:"4.7",
       count:"2.1k"
@@ -88,7 +84,6 @@ export const products = [
     _id: "66880a00-bc39-40e2-92eb-d3afdd25b5cf",
     title: "Divine Pineapple Cake",
     image:cake5,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/jungle-fondant-cake_japot9.jpg",
     ratings: {
       rate:"4.2",
       count:"566"
@@ -107,7 +102,6 @@ export const products = [
     _id: "f17bff86-995c-45fa-827a-902c54f1cdd8",
     title: "Red Velvet Egg Cake",
     image:cake6,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/red-velvet-egg-cake_m0v2hi.jpg",
     ratings: {
       rate:"4.0",
       count:"1.67k"
@@ -126,7 +120,6 @@ export const products = [
     _id: "09755991-ed17-430e-8fad-c292e136f061",
     title: "Strawberry Cheesecake",
     image:cake7,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/strawberry-cheesecake-500gm-_tqhdzv.jpg",
     ratings: {
       rate:"4.9",
       count:"979"
@@ -145,7 +138,6 @@ export const products = [
     _id: "4198a865-8d52-4621-8f7a-9c1271eafd37",
     title: "Mango Fruit Eggless Cake",
     image:cake8,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/mango-fruit-eggless-cake_dpawsn.jpg",
     ratings: {
       rate:"4.3",
       count:"2.3k"
@@ -164,7 +156,6 @@ export const products = [
     _id: "edc59062-2775-4a4d-bfc9-ca334b014f55",
     title: "French Blueberry Cheese Cake",
     image:cake9,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/french-blueberry-cheese-cake-500gm-_dhxiff.jpg",
     ratings: {
       rate:"4.2",
       count:"147"
@@ -183,7 +174,6 @@ export const products = [
     _id: "50ea3a7c-bf91-4a41-b5ee-ae49717402b5",
     title: "Black Forest Eggless Cake",
     image:cake10,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684828631/cakefactory/cakes/black-forest-eggless-cake_ywqqug.jpg",
     ratings: {
       rate:"4.7",
       count:"2.3k"
@@ -203,7 +193,6 @@ export const products = [
     _id: "ed21760a-e88e-4d78-9bfd-8807f1f2c024",
     title: "Chocolote Muffin",
     image:muffin1,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin1-choco_zz0cxs.webp",
     ratings: {
       rate:"4.1",
       count:"128"
@@ -222,7 +211,6 @@ export const products = [
     _id: "555d6f65-e5cc-4ef0-a139-ac7e1959883c",
     title: "Red Velvet Muffin",
     image:muffin2,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin2_zmisrt.webp",
     ratings: {
       rate:"4.8",
       count:"612"
@@ -241,7 +229,6 @@ export const products = [
     _id: "e8fdd588-a714-4eda-a23b-fc8082cf8abb",
     title: "Blueberry Muffin",
     image:muffin3,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin3-blue_qd50gq.webp",
     ratings: {
       rate:"4.3",
       count:"29"
@@ -260,7 +247,6 @@ export const products = [
     _id: "5a716ab3-e800-49a0-9cee-e132dd467f52",
     title: "Hazlenut Muffin",
     image:muffin4,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin4-hazlenut_ebmwvh.webp",
     ratings: {
       rate:"4.0",
       count:"199"
@@ -279,7 +265,6 @@ export const products = [
     _id: "cdb7260a-3f8d-497d-976b-72b79efe5087",
     title: "Dark Fantasy Muffin",
     image:muffin5,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684830885/cakefactory/muffins/muffin5-darkfant_up0yux.webp",
     ratings: {
       rate:"4.3",
       count:"322"
@@ -299,7 +284,6 @@ export const products = [
     _id: "e5dad40e-0be4-46db-af2c-d2a31a5166d1",
     title: "Strawberry Cheesecake",
     image:pastry1,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry1-strawberry_ipi1tg.webp",
     ratings: {
       rate:"4.4",
       count:"722"
@@ -318,7 +302,6 @@ export const products = [
     _id: "3b6d561b-990d-4441-ba35-daeee839eead",
     title: "Blueberry Cheesecake",
     image:pastry2,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry2-blueberry_nhvcrt.webp",
     ratings: {
       rate:"4.9",
       count:"2.5k"
@@ -337,7 +320,6 @@ export const products = [
     _id: "95371b1f-5384-4012-8461-c1e5b23561a4",
     title: "Rich Red Velvet Pastry",
     image:pastry3,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry3-red-velvet_uoqkba.webp",
     ratings: {
       rate:"4.5",
       count:"1.2k"
@@ -356,7 +338,6 @@ export const products = [
     _id: "59039aa6-842f-42c6-9e4b-b498adb24a7c",
     title: "Chocolate Truffle Pastry",
     image:pastry4,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833625/cakefactory/muffins/pastry4-choc-truffle2_ts1jsz.jpg",
     ratings: {
       rate:"4.3",
       count:"565"
@@ -375,7 +356,6 @@ export const products = [
     _id: "0cdc3b89-bcb9-48e4-8271-3db68c87b6e6",
     title: "Mango Cheesecake",
     image:pastry5,
-    imageUrl:"https://res.cloudinary.com/darl8idou/image/upload/v1684833624/cakefactory/muffins/pastry5-mango_tvclwg.webp",
     ratings: {
       rate:"4.1",
       count:"233"

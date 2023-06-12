@@ -19,6 +19,7 @@ export const WishlistContextProvider = ({ children }) => {
 
   const [wishlist, setWishList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [disableWishlistBtn, setDisableWishlistBtn] = useState(false);
 
   const getWishlistData = async () => {
     setIsLoading(true);
@@ -40,11 +41,11 @@ export const WishlistContextProvider = ({ children }) => {
 
       if (status === 201) {
         setWishList(data?.wishlist);
-        console.log("add_to_wishlist", data);
+        //console.log("add_to_wishlist", data);
       }
     } catch (e) {
       console.error(e);
-      console.log("add_to_wishlist_error", e);
+      //console.log("add_to_wishlist_error", e);
     }
   };
 
@@ -71,6 +72,10 @@ export const WishlistContextProvider = ({ children }) => {
         toast.success("Item removed from wishlist.");
       } else {
         addToWishlist(item);
+        setDisableWishlistBtn(true);
+        setTimeout(()=>{
+          setDisableWishlistBtn(false);
+        },600)
         toast.success("Item added to Wishlist.");
       }
     } else {
@@ -94,6 +99,7 @@ export const WishlistContextProvider = ({ children }) => {
         removeFromWishlist,
         isItemInWishlist,
         addToWishlistHandler,
+        disableWishlistBtn,
       }}
     >
       {children}

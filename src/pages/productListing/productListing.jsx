@@ -5,13 +5,14 @@ import "./productListing.css"
 import { Sidebar } from '../../components/sidebar/sidebar';
 import { useFilterContext } from '../../contexts/filterContext';
 import { NoProductsFound } from '../../components/no-products-found/noProductsFound';
+import { Loading } from '../../components/loader/loading';
 
 export const ProductListing = () => {
-  const { productLoading} = useProductsContext();
+  const {isLoading} = useProductsContext();
   const { newData} = useFilterContext();
 
 
-if (productLoading) {return<><p>Loading...</p></>} else
+if (isLoading) {return(<Loading/>)} else
   return (
     <>
     <div className='product-listing-page'>
@@ -32,16 +33,6 @@ if (productLoading) {return<><p>Loading...</p></>} else
         ) : (
           <NoProductsFound/>
         )
-      }
-
-
-      {
-        newData?.map((item) => {
-
-          return(
-          <ProductCard item={item} key={item._id}/>
-          )
-        })
       }
     </div>
 

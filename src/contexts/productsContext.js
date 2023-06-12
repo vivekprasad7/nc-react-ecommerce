@@ -7,28 +7,29 @@ export const ProductsContextProvider = ({children}) => {
 
     const [productData, setProductData] = useState([]);
     const [categoryData, setCategoryData] = useState([]);
-    const [productLoading, setProductLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
     const getProducts = async () => {
+        setIsLoading(true)
         try{
-            setProductLoading(true)
             const res = await axios({ method:"GET", url:"/api/products"});
             setProductData(res.data.products);
-            console.log(res);
-            setProductLoading(false)
+            setIsLoading(false)
         } catch(e){
             console.error(e)
-            setProductLoading(false)
+            setIsLoading(false)
         }
     }
     const getCategories = async () => {
+        setIsLoading(true)
         try{
             const res = await axios({ method:"GET", url:"/api/categories"});
             setCategoryData(res.data.categories);
-            console.log(res);
+            setIsLoading(false)
         } catch(e){
             console.error(e)
+            setIsLoading(false)
         }
     }
 
@@ -41,7 +42,7 @@ export const ProductsContextProvider = ({children}) => {
 
 
     return(
-        <ProductsContext.Provider value={{productData, categoryData, productLoading}}>
+        <ProductsContext.Provider value={{productData, categoryData, isLoading}}>
             {children}
         </ProductsContext.Provider>
     )

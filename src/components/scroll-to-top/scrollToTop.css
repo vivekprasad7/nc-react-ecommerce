@@ -1,0 +1,27 @@
+.go-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #ededed;
+    color:rgb(25, 25, 25);
+    border: none;
+    max-height: 2rem;   
+    max-width: 2rem;
+    border-radius: 50%;
+    padding: 0.6rem;
+    cursor:pointer;
+}
+
+.go-to-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (width < 768px){
+    .go-to-top{
+        bottom:80px;
+        right:40px;
+    }
+}

@@ -64,7 +64,7 @@ export const Home = () => {
     </div>
 
     <div className='footer-bar'>
-      <p>Made with Love by Vivek</p>
+      <p>Made with ❤️ by Vivek</p>
     </div>
 
     <div className='mobile-menu'>

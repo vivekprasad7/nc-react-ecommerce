@@ -45,11 +45,11 @@ export const FilterContextProvider = ({children}) =>{
     
     }
 
-    console.log("filterContext",getFilteredProducts());
+    //console.log("filterContext",getFilteredProducts());
 
     const newData = getFilteredProducts();
 
-    console.log("haha", newData);
+    //console.log("lol", newData);
     
 
 

@@ -15,8 +15,8 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const testInput = {
-    email: "tylerdurden@gmail.com",
-    password: "tylerdurden",
+    email: "howardroark@gmail.com",
+    password: "howardroark",
   };
 
   function handleUserLogin() {
@@ -34,8 +34,8 @@ export const Login = () => {
     navigate("/products");
     setSignupInput({
       ...signupInput,
-      firstName: "Tyler",
-      lastName: "Durden",
+      firstName: "Howard",
+      lastName: "Roark",
       email: testInput.email,
     });
   }

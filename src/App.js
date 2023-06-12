@@ -23,6 +23,7 @@ import { useAuthContext } from "./contexts/authContext";
 import { MobileFilter } from "./components/mobile-filters/mobileFilter";
 import { NotFound } from "./pages/notFound/notFound";
 import { OrderSummary } from "./pages/orderSummary/orderSummary";
+import { ScrollToTop } from "./components/scroll-to-top/scrollToTop";
 
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
           top: "5rem",
         }}
       />
+      <ScrollToTop/>
       <MobileMenu />
 
 

@@ -16,6 +16,7 @@ export const Categories = () => {
         {
             categoryData.map((category) => (
                 <div 
+                key={category._id}
                 onClick={() => {
                     filterDispatch({ type: "CLEAR_ALL_FILTERS" });
                     filterDispatch({

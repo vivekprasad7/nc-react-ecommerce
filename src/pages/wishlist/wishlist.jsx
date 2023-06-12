@@ -5,11 +5,12 @@ import "./wishlist.css"
 import { useWishlistContext } from '../../contexts/wishlistContext'
 import emptycart from "../../assets/animations/emptycart.json"
 import Lottie from "lottie-react"
+import { Loading } from '../../components/loader/loading'
 
 export const Wishlist = () => {
   const {wishlist, isLoading} = useWishlistContext();
 
-  if (isLoading) {return(<p>Loading...</p>)} else
+  if (isLoading) {return(<><Loading/></>)} else
   return (
     <div>
       

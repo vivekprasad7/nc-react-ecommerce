@@ -6,7 +6,7 @@ export const Details = () => {
 
   const {authState : {user}, logoutHandler} = useAuthContext();
 
-  console.log("details",user);
+  //console.log("details",user);
 
 
   return (

@@ -45,7 +45,7 @@ export const AuthContextProvider = ({children}) => {
                 navigate(location?.state?.from?.pathname || "/")
                 localStorage.setItem("token", data?.encodedToken)
                 localStorage.setItem("current_user", data?.foundUser?.firstName)
-                console.log(data);
+                //console.log(data);
                 toast.success("Login Successful")
 
             }
@@ -75,13 +75,13 @@ export const AuthContextProvider = ({children}) => {
                 navigate(location?.state?.from?.pathname || "/products")
                 localStorage.setItem("token", data?.encodedToken)
                 localStorage.setItem("new_user", data?.createdUser?.email)
-                console.log(data)
+                //console.log(data)
                 toast.success("New User Created, Login Successful!")
 
             }
         } catch(e){
             console.error(e);
-            console.log("signup", e)
+            //console.log("signup", e)
            
         }
     }

@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import { getProductById } from '../../services/productDetailsService'
-import { useNavigate, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import "./productDetails.css"
 import { useCartContext } from '../../contexts/cartContext';
 import { useWishlistContext } from '../../contexts/wishlistContext';
+import { Loading } from '../../components/loader/loading';
 
 export const ProductDetails = () => {
 
   const [singleProduct, setSingleProduct] = useState({});
-  const { addToCartHandler } = useCartContext();
-  const { addToWishlistHandler } = useWishlistContext();
+  const { addToCartHandler , disableBtn} = useCartContext();
+  const { addToWishlistHandler, disableWishlistBtn} = useWishlistContext();
   const { productID } = useParams();
 
+  const [ isLoading, setIsLoading] = useState(false);
+
   const getSingleProduct = async () => {
+    setIsLoading(true)
     try {
       const res = await getProductById(productID)
       setSingleProduct(res?.product)
+      setIsLoading(false)
 
     } catch (e) {
       console.error(e)
+      setIsLoading(false)
     }
   }
 
   useEffect(() => {
-    getSingleProduct()
+    getSingleProduct();
+    // eslint-disable-next-line
   }, [])
 
   const { title, desc, image, price, originalPrice, ratings} = singleProduct
 
+
+  if(isLoading) {return(<Loading/>)} else 
   return (
     <>
       <div className='detail-container'>
@@ -55,8 +64,8 @@ export const ProductDetails = () => {
             {/* <p>Inclusive of all Taxes</p> */}
 
             <div className='buttons'>
-              <button className='impact-btn' onClick={() => addToCartHandler(singleProduct)}>Add to Cart</button>
-              <button className='impact-btn' onClick={() => addToWishlistHandler(singleProduct)}>Add to Wishlist</button>
+              <button className='impact-btn' onClick={() => addToCartHandler(singleProduct)} disabled={disableBtn}>Add to Cart</button>
+              <button className='impact-btn' onClick={() => addToWishlistHandler(singleProduct)} disabled={disableWishlistBtn}>Add to Wishlist</button>
             </div>
 
             {/* <ul>
@@ -65,11 +74,6 @@ export const ProductDetails = () => {
         </ul> */}
 
           </div>
-
-
-
-
-
         </div>
       </div>
     </>

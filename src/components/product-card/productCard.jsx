@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./productCard.css";
-import { useDataContext } from "../../contexts/dataContext";
 import { useAuthContext } from "../../contexts/authContext";
 import { useWishlistContext } from "../../contexts/wishlistContext";
 import { isItemInWishlist } from "../../utils/isItemInWishlist";
@@ -15,8 +14,8 @@ export const ProductCard = ({ item }) => {
     authState: { token },
   } = useAuthContext();
 
-  const { wishlist, addToWishlistHandler } = useWishlistContext();
-  const { cart, addToCartHandler } = useCartContext();
+  const { wishlist, addToWishlistHandler, disableWishlistBtn } = useWishlistContext();
+  const { cart, addToCartHandler, disableBtn } = useCartContext();
 
 
   const {
@@ -31,7 +30,7 @@ export const ProductCard = ({ item }) => {
   return (
     <>
       <div className="product-card">
-        <img src={image} onClick={() => navigate(`/products/${_id}`)} />
+        <img src={image} onClick={() => navigate(`/products/${_id}`)} alt={title}/>
         <span className={isBestSeller ? "card-best" : "best-none"}>
           Best Seller
         </span>
@@ -41,7 +40,7 @@ export const ProductCard = ({ item }) => {
             isItemInWishlist(_id, wishlist) ? "card-hearted" : "card-heart"
           }
           role="button"
-          disabled={true}
+          disabled={disableWishlistBtn}
         >
           <i className="fa fa-heart wishlist-circle" aria-hidden="true"></i>{" "}
         </span>
@@ -66,6 +65,7 @@ export const ProductCard = ({ item }) => {
         <button
           className={!isItemInCart(_id, cart) ? "card-btn" : "added-card-btn"}
           onClick={() => addToCartHandler(item)}
+          disabled={disableBtn}
         >
           {isItemInCart(_id, cart) ? (
             <Link to="/cart">Go to Cart</Link>

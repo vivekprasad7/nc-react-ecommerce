@@ -8,19 +8,19 @@ import { useWishlistContext } from '../../contexts/wishlistContext';
 import { isItemInWishlist } from '../../utils/isItemInWishlist';
 import emptycart from "../../assets/animations/emptycart.json"
 import Lottie from "lottie-react"
+import { Loading } from '../../components/loader/loading';
 
 export const Cart = () => {
 
   const navigate = useNavigate();
   const{ authState:{token}} = useAuthContext();
 
-  const {cart, updateCartHandler, removeCartHandler} = useCartContext();
+  const {cart, updateCartHandler, removeCartHandler, cartLoading} = useCartContext();
   const{wishlist, addToWishlistHandler} = useWishlistContext();
 
 
 
-  
-
+  if(cartLoading) {return(<><Loading/></>)} else
   return (
     <>
     <div className='cart-heading'><h2>Cart</h2></div>
